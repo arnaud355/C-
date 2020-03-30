@@ -1,0 +1,11 @@
+C:\Users\arnaud.baleh\source\repos\beginningCollectionsAndArrays\beginningCollectionsAndArrays\bin\Debug\netcoreapp3.1\beginningCollectionsAndArrays.exe
+C:\Users\arnaud.baleh\source\repos\beginningCollectionsAndArrays\beginningCollectionsAndArrays\bin\Debug\netcoreapp3.1\beginningCollectionsAndArrays.deps.json
+C:\Users\arnaud.baleh\source\repos\beginningCollectionsAndArrays\beginningCollectionsAndArrays\bin\Debug\netcoreapp3.1\beginningCollectionsAndArrays.runtimeconfig.json
+C:\Users\arnaud.baleh\source\repos\beginningCollectionsAndArrays\beginningCollectionsAndArrays\bin\Debug\netcoreapp3.1\beginningCollectionsAndArrays.runtimeconfig.dev.json
+C:\Users\arnaud.baleh\source\repos\beginningCollectionsAndArrays\beginningCollectionsAndArrays\bin\Debug\netcoreapp3.1\beginningCollectionsAndArrays.dll
+C:\Users\arnaud.baleh\source\repos\beginningCollectionsAndArrays\beginningCollectionsAndArrays\bin\Debug\netcoreapp3.1\beginningCollectionsAndArrays.pdb
+C:\Users\arnaud.baleh\source\repos\beginningCollectionsAndArrays\beginningCollectionsAndArrays\obj\Debug\netcoreapp3.1\beginningCollectionsAndArrays.csprojAssemblyReference.cache
+C:\Users\arnaud.baleh\source\repos\beginningCollectionsAndArrays\beginningCollectionsAndArrays\obj\Debug\netcoreapp3.1\beginningCollectionsAndArrays.AssemblyInfoInputs.cache
+C:\Users\arnaud.baleh\source\repos\beginningCollectionsAndArrays\beginningCollectionsAndArrays\obj\Debug\netcoreapp3.1\beginningCollectionsAndArrays.AssemblyInfo.cs
+C:\Users\arnaud.baleh\source\repos\beginningCollectionsAndArrays\beginningCollectionsAndArrays\obj\Debug\netcoreapp3.1\beginningCollectionsAndArrays.dll
+C:\Users\arnaud.baleh\source\repos\beginningCollectionsAndArrays\beginningCollectionsAndArrays\obj\Debug\netcoreapp3.1\beginningCollectionsAndArrays.pdb

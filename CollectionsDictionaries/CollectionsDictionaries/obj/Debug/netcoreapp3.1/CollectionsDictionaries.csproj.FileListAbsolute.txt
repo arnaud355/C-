@@ -1,0 +1,11 @@
+C:\Users\arnaud.baleh\source\repos\CollectionsDictionaries\CollectionsDictionaries\bin\Debug\netcoreapp3.1\CollectionsDictionaries.exe
+C:\Users\arnaud.baleh\source\repos\CollectionsDictionaries\CollectionsDictionaries\bin\Debug\netcoreapp3.1\CollectionsDictionaries.deps.json
+C:\Users\arnaud.baleh\source\repos\CollectionsDictionaries\CollectionsDictionaries\bin\Debug\netcoreapp3.1\CollectionsDictionaries.runtimeconfig.json
+C:\Users\arnaud.baleh\source\repos\CollectionsDictionaries\CollectionsDictionaries\bin\Debug\netcoreapp3.1\CollectionsDictionaries.runtimeconfig.dev.json
+C:\Users\arnaud.baleh\source\repos\CollectionsDictionaries\CollectionsDictionaries\bin\Debug\netcoreapp3.1\CollectionsDictionaries.dll
+C:\Users\arnaud.baleh\source\repos\CollectionsDictionaries\CollectionsDictionaries\bin\Debug\netcoreapp3.1\CollectionsDictionaries.pdb
+C:\Users\arnaud.baleh\source\repos\CollectionsDictionaries\CollectionsDictionaries\obj\Debug\netcoreapp3.1\CollectionsDictionaries.csprojAssemblyReference.cache
+C:\Users\arnaud.baleh\source\repos\CollectionsDictionaries\CollectionsDictionaries\obj\Debug\netcoreapp3.1\CollectionsDictionaries.AssemblyInfoInputs.cache
+C:\Users\arnaud.baleh\source\repos\CollectionsDictionaries\CollectionsDictionaries\obj\Debug\netcoreapp3.1\CollectionsDictionaries.AssemblyInfo.cs
+C:\Users\arnaud.baleh\source\repos\CollectionsDictionaries\CollectionsDictionaries\obj\Debug\netcoreapp3.1\CollectionsDictionaries.dll
+C:\Users\arnaud.baleh\source\repos\CollectionsDictionaries\CollectionsDictionaries\obj\Debug\netcoreapp3.1\CollectionsDictionaries.pdb

@@ -1,0 +1,11 @@
+C:\Users\arnaud.baleh\source\repos\tpCalculEnBoucle\tpCalculEnBoucle\bin\Debug\netcoreapp3.1\tpCalculEnBoucle.exe
+C:\Users\arnaud.baleh\source\repos\tpCalculEnBoucle\tpCalculEnBoucle\bin\Debug\netcoreapp3.1\tpCalculEnBoucle.deps.json
+C:\Users\arnaud.baleh\source\repos\tpCalculEnBoucle\tpCalculEnBoucle\bin\Debug\netcoreapp3.1\tpCalculEnBoucle.runtimeconfig.json
+C:\Users\arnaud.baleh\source\repos\tpCalculEnBoucle\tpCalculEnBoucle\bin\Debug\netcoreapp3.1\tpCalculEnBoucle.runtimeconfig.dev.json
+C:\Users\arnaud.baleh\source\repos\tpCalculEnBoucle\tpCalculEnBoucle\bin\Debug\netcoreapp3.1\tpCalculEnBoucle.dll
+C:\Users\arnaud.baleh\source\repos\tpCalculEnBoucle\tpCalculEnBoucle\bin\Debug\netcoreapp3.1\tpCalculEnBoucle.pdb
+C:\Users\arnaud.baleh\source\repos\tpCalculEnBoucle\tpCalculEnBoucle\obj\Debug\netcoreapp3.1\tpCalculEnBoucle.csprojAssemblyReference.cache
+C:\Users\arnaud.baleh\source\repos\tpCalculEnBoucle\tpCalculEnBoucle\obj\Debug\netcoreapp3.1\tpCalculEnBoucle.AssemblyInfoInputs.cache
+C:\Users\arnaud.baleh\source\repos\tpCalculEnBoucle\tpCalculEnBoucle\obj\Debug\netcoreapp3.1\tpCalculEnBoucle.AssemblyInfo.cs
+C:\Users\arnaud.baleh\source\repos\tpCalculEnBoucle\tpCalculEnBoucle\obj\Debug\netcoreapp3.1\tpCalculEnBoucle.dll
+C:\Users\arnaud.baleh\source\repos\tpCalculEnBoucle\tpCalculEnBoucle\obj\Debug\netcoreapp3.1\tpCalculEnBoucle.pdb

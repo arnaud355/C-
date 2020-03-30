@@ -1,0 +1,11 @@
+C:\Users\arnaud.baleh\source\repos\chiffresToRomanChiffres\chiffresToRomanChiffres\bin\Debug\netcoreapp3.1\chiffresToRomanChiffres.exe
+C:\Users\arnaud.baleh\source\repos\chiffresToRomanChiffres\chiffresToRomanChiffres\bin\Debug\netcoreapp3.1\chiffresToRomanChiffres.deps.json
+C:\Users\arnaud.baleh\source\repos\chiffresToRomanChiffres\chiffresToRomanChiffres\bin\Debug\netcoreapp3.1\chiffresToRomanChiffres.runtimeconfig.json
+C:\Users\arnaud.baleh\source\repos\chiffresToRomanChiffres\chiffresToRomanChiffres\bin\Debug\netcoreapp3.1\chiffresToRomanChiffres.runtimeconfig.dev.json
+C:\Users\arnaud.baleh\source\repos\chiffresToRomanChiffres\chiffresToRomanChiffres\bin\Debug\netcoreapp3.1\chiffresToRomanChiffres.dll
+C:\Users\arnaud.baleh\source\repos\chiffresToRomanChiffres\chiffresToRomanChiffres\bin\Debug\netcoreapp3.1\chiffresToRomanChiffres.pdb
+C:\Users\arnaud.baleh\source\repos\chiffresToRomanChiffres\chiffresToRomanChiffres\obj\Debug\netcoreapp3.1\chiffresToRomanChiffres.csprojAssemblyReference.cache
+C:\Users\arnaud.baleh\source\repos\chiffresToRomanChiffres\chiffresToRomanChiffres\obj\Debug\netcoreapp3.1\chiffresToRomanChiffres.AssemblyInfoInputs.cache
+C:\Users\arnaud.baleh\source\repos\chiffresToRomanChiffres\chiffresToRomanChiffres\obj\Debug\netcoreapp3.1\chiffresToRomanChiffres.AssemblyInfo.cs
+C:\Users\arnaud.baleh\source\repos\chiffresToRomanChiffres\chiffresToRomanChiffres\obj\Debug\netcoreapp3.1\chiffresToRomanChiffres.dll
+C:\Users\arnaud.baleh\source\repos\chiffresToRomanChiffres\chiffresToRomanChiffres\obj\Debug\netcoreapp3.1\chiffresToRomanChiffres.pdb

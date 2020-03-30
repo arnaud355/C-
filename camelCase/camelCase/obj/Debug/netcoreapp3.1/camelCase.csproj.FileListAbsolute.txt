@@ -1,0 +1,11 @@
+C:\Users\arnaud.baleh\source\repos\camelCase\camelCase\bin\Debug\netcoreapp3.1\camelCase.exe
+C:\Users\arnaud.baleh\source\repos\camelCase\camelCase\bin\Debug\netcoreapp3.1\camelCase.deps.json
+C:\Users\arnaud.baleh\source\repos\camelCase\camelCase\bin\Debug\netcoreapp3.1\camelCase.runtimeconfig.json
+C:\Users\arnaud.baleh\source\repos\camelCase\camelCase\bin\Debug\netcoreapp3.1\camelCase.runtimeconfig.dev.json
+C:\Users\arnaud.baleh\source\repos\camelCase\camelCase\bin\Debug\netcoreapp3.1\camelCase.dll
+C:\Users\arnaud.baleh\source\repos\camelCase\camelCase\bin\Debug\netcoreapp3.1\camelCase.pdb
+C:\Users\arnaud.baleh\source\repos\camelCase\camelCase\obj\Debug\netcoreapp3.1\camelCase.csprojAssemblyReference.cache
+C:\Users\arnaud.baleh\source\repos\camelCase\camelCase\obj\Debug\netcoreapp3.1\camelCase.AssemblyInfoInputs.cache
+C:\Users\arnaud.baleh\source\repos\camelCase\camelCase\obj\Debug\netcoreapp3.1\camelCase.AssemblyInfo.cs
+C:\Users\arnaud.baleh\source\repos\camelCase\camelCase\obj\Debug\netcoreapp3.1\camelCase.dll
+C:\Users\arnaud.baleh\source\repos\camelCase\camelCase\obj\Debug\netcoreapp3.1\camelCase.pdb
