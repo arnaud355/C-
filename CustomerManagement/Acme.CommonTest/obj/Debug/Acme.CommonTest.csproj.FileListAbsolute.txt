@@ -1,0 +1,17 @@
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\Acme.CommonTest\obj\Debug\Acme.CommonTest.csprojAssemblyReference.cache
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\Acme.CommonTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\Acme.CommonTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\Acme.CommonTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\Acme.CommonTest\bin\Debug\Acme.CommonTest.dll
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\Acme.CommonTest\bin\Debug\Acme.CommonTest.pdb
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\Acme.CommonTest\bin\Debug\Acme.Common.dll
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\Acme.CommonTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\Acme.CommonTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\Acme.CommonTest\bin\Debug\Acme.Common.pdb
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\Acme.CommonTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\Acme.CommonTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\Acme.CommonTest\obj\Debug\Acme.CommonTest.csproj.CopyComplete
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\Acme.CommonTest\obj\Debug\Acme.CommonTest.dll
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\Acme.CommonTest\obj\Debug\Acme.CommonTest.pdb
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\Acme.CommonTest\bin\Debug\CustomerManagement.BL.dll
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\Acme.CommonTest\bin\Debug\CustomerManagement.BL.pdb

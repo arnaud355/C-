@@ -1,0 +1,8 @@
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\CustomerManagement.BL\bin\Debug\CustomerManagement.BL.dll
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\CustomerManagement.BL\bin\Debug\CustomerManagement.BL.pdb
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\CustomerManagement.BL\obj\Debug\CustomerManagement.BL.csprojAssemblyReference.cache
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\CustomerManagement.BL\obj\Debug\CustomerManagement.BL.dll
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\CustomerManagement.BL\obj\Debug\CustomerManagement.BL.pdb
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\CustomerManagement.BL\bin\Debug\Acme.Common.dll
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\CustomerManagement.BL\bin\Debug\Acme.Common.pdb
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\CustomerManagement.BL\obj\Debug\CustomerManagement.BL.csproj.CopyComplete

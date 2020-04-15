@@ -1,0 +1,5 @@
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\Acme.Common\bin\Debug\Acme.Common.dll
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\Acme.Common\bin\Debug\Acme.Common.pdb
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\Acme.Common\obj\Debug\Acme.Common.csprojAssemblyReference.cache
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\Acme.Common\obj\Debug\Acme.Common.dll
+C:\Users\arnaud.baleh\source\repos\C-\CustomerManagement\Acme.Common\obj\Debug\Acme.Common.pdb
