@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arnaud.baleh\\source\\repos\\camelCase\\camelCase\\camelCase.csproj": {}
+    "C:\\Users\\arnaud.baleh\\source\\repos\\C-\\camelCase\\camelCase\\camelCase.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arnaud.baleh\\source\\repos\\camelCase\\camelCase\\camelCase.csproj": {
+    "C:\\Users\\arnaud.baleh\\source\\repos\\C-\\camelCase\\camelCase\\camelCase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arnaud.baleh\\source\\repos\\camelCase\\camelCase\\camelCase.csproj",
+        "projectUniqueName": "C:\\Users\\arnaud.baleh\\source\\repos\\C-\\camelCase\\camelCase\\camelCase.csproj",
         "projectName": "camelCase",
-        "projectPath": "C:\\Users\\arnaud.baleh\\source\\repos\\camelCase\\camelCase\\camelCase.csproj",
+        "projectPath": "C:\\Users\\arnaud.baleh\\source\\repos\\C-\\camelCase\\camelCase\\camelCase.csproj",
         "packagesPath": "C:\\Users\\arnaud.baleh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arnaud.baleh\\source\\repos\\camelCase\\camelCase\\obj\\",
+        "outputPath": "C:\\Users\\arnaud.baleh\\source\\repos\\C-\\camelCase\\camelCase\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

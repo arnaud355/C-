@@ -1,0 +1,41 @@
+﻿@page
+@model OdeToFood.ListModel
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>Restaurants</h1>
+<form method="get">
+    <div class="form-group">
+        <div class="input-group">
+            <!--asp-for à la place de value="" name="searchTerm"
+                pour lié le champs d'input au modèle ListModel -->
+            <input type="search" class="form-control" asp-for="SearchTerm" />
+            <span class="input-group-btn">
+                <button class="btn btn-default">
+                    <i class="fas fa-search"></i>
+                   
+                </button>
+            </span>
+        </div>
+    </div>
+</form>
+
+<table class="table">
+    @foreach(var restaurant in Model.Restaurants)
+    {
+    <tr>
+        <td>
+            @restaurant.Name
+        </td>
+        <td>
+            @restaurant.Location
+        </td>
+        <td>
+            @restaurant.Cuisine
+        </td>
+    </tr>
+    }
+</table>
+@Model.Message
+

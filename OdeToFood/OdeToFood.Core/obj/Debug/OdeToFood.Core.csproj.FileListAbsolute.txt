@@ -1,0 +1,5 @@
+C:\Users\arnaud.baleh\source\repos\C-\OdeToFood\OdeToFood.Core\bin\Debug\OdeToFood.Core.dll
+C:\Users\arnaud.baleh\source\repos\C-\OdeToFood\OdeToFood.Core\bin\Debug\OdeToFood.Core.pdb
+C:\Users\arnaud.baleh\source\repos\C-\OdeToFood\OdeToFood.Core\obj\Debug\OdeToFood.Core.csprojAssemblyReference.cache
+C:\Users\arnaud.baleh\source\repos\C-\OdeToFood\OdeToFood.Core\obj\Debug\OdeToFood.Core.dll
+C:\Users\arnaud.baleh\source\repos\C-\OdeToFood\OdeToFood.Core\obj\Debug\OdeToFood.Core.pdb
