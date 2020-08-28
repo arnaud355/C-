@@ -1,0 +1,11 @@
+C:\Users\arnaud.baleh\source\repos\C-\InterfacesOC\InterfacesOC\bin\Debug\netcoreapp3.1\InterfacesOC.exe
+C:\Users\arnaud.baleh\source\repos\C-\InterfacesOC\InterfacesOC\bin\Debug\netcoreapp3.1\InterfacesOC.deps.json
+C:\Users\arnaud.baleh\source\repos\C-\InterfacesOC\InterfacesOC\bin\Debug\netcoreapp3.1\InterfacesOC.runtimeconfig.json
+C:\Users\arnaud.baleh\source\repos\C-\InterfacesOC\InterfacesOC\bin\Debug\netcoreapp3.1\InterfacesOC.runtimeconfig.dev.json
+C:\Users\arnaud.baleh\source\repos\C-\InterfacesOC\InterfacesOC\bin\Debug\netcoreapp3.1\InterfacesOC.dll
+C:\Users\arnaud.baleh\source\repos\C-\InterfacesOC\InterfacesOC\bin\Debug\netcoreapp3.1\InterfacesOC.pdb
+C:\Users\arnaud.baleh\source\repos\C-\InterfacesOC\InterfacesOC\obj\Debug\netcoreapp3.1\InterfacesOC.csprojAssemblyReference.cache
+C:\Users\arnaud.baleh\source\repos\C-\InterfacesOC\InterfacesOC\obj\Debug\netcoreapp3.1\InterfacesOC.AssemblyInfoInputs.cache
+C:\Users\arnaud.baleh\source\repos\C-\InterfacesOC\InterfacesOC\obj\Debug\netcoreapp3.1\InterfacesOC.AssemblyInfo.cs
+C:\Users\arnaud.baleh\source\repos\C-\InterfacesOC\InterfacesOC\obj\Debug\netcoreapp3.1\InterfacesOC.dll
+C:\Users\arnaud.baleh\source\repos\C-\InterfacesOC\InterfacesOC\obj\Debug\netcoreapp3.1\InterfacesOC.pdb
