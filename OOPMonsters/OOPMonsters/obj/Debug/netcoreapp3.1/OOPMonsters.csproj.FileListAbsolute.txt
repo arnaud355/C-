@@ -1,0 +1,11 @@
+C:\Users\arnaud.baleh\source\repos\C-\OOPMonsters\OOPMonsters\bin\Debug\netcoreapp3.1\OOPMonsters.exe
+C:\Users\arnaud.baleh\source\repos\C-\OOPMonsters\OOPMonsters\bin\Debug\netcoreapp3.1\OOPMonsters.deps.json
+C:\Users\arnaud.baleh\source\repos\C-\OOPMonsters\OOPMonsters\bin\Debug\netcoreapp3.1\OOPMonsters.runtimeconfig.json
+C:\Users\arnaud.baleh\source\repos\C-\OOPMonsters\OOPMonsters\bin\Debug\netcoreapp3.1\OOPMonsters.runtimeconfig.dev.json
+C:\Users\arnaud.baleh\source\repos\C-\OOPMonsters\OOPMonsters\bin\Debug\netcoreapp3.1\OOPMonsters.dll
+C:\Users\arnaud.baleh\source\repos\C-\OOPMonsters\OOPMonsters\bin\Debug\netcoreapp3.1\OOPMonsters.pdb
+C:\Users\arnaud.baleh\source\repos\C-\OOPMonsters\OOPMonsters\obj\Debug\netcoreapp3.1\OOPMonsters.csprojAssemblyReference.cache
+C:\Users\arnaud.baleh\source\repos\C-\OOPMonsters\OOPMonsters\obj\Debug\netcoreapp3.1\OOPMonsters.AssemblyInfoInputs.cache
+C:\Users\arnaud.baleh\source\repos\C-\OOPMonsters\OOPMonsters\obj\Debug\netcoreapp3.1\OOPMonsters.AssemblyInfo.cs
+C:\Users\arnaud.baleh\source\repos\C-\OOPMonsters\OOPMonsters\obj\Debug\netcoreapp3.1\OOPMonsters.dll
+C:\Users\arnaud.baleh\source\repos\C-\OOPMonsters\OOPMonsters\obj\Debug\netcoreapp3.1\OOPMonsters.pdb
