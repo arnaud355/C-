@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ListeChainee
 {
-    public class ListeGenerique<T>
+    public class ListeGenerique<T> where T : IComparable<T>
     {
 
         private int capacite;
@@ -152,5 +152,72 @@ namespace ListeChainee
             this.tableau = copieTableau;
            
          }
+
+        public void SuppListe()
+        {
+            for(int i = 0;i < nbElements; i++)
+            {
+                this.tableau[i] = default(T);
+            }
+           
+        }
+        public void DelEleToIndice(T ele)
+        {
+            T eleEnCours;
+            int index = 0;
+
+            for (int i = 0; i < nbElements; i++)
+            {
+                eleEnCours = tableau[i];
+                if (object.Equals(eleEnCours, ele))
+                {
+                    this.tableau[i] = default(T);
+                    index = i;
+                }
+            }
+
+            //Si c'est le dernier ele on reduit juste le tableau
+            if(index == nbElements - 1)
+            {
+                nbElements--;
+                T[] copieTableau = new T[nbElements];
+                for (int i = 0; i < nbElements; i++)
+                {
+                    copieTableau[i] = this.tableau[i];
+                }
+
+                this.tableau = copieTableau;
+            }
+            else
+            {
+                T[] copieTableau = new T[nbElements];
+                for (int i = 0; i < index; i++)
+                {
+                    copieTableau[i] = this.tableau[i];
+                }
+
+                for (int j = index; j < nbElements - 1; j++)
+                {
+                    copieTableau[j] = this.GetSuivant(j);
+                }
+
+                nbElements--;
+                T[] copieTableauV2 = new T[nbElements];
+
+                for (int v = 0; v < nbElements; v++)
+                {
+                    copieTableauV2[v] = copieTableau[v];
+                }
+
+                this.tableau = copieTableauV2;
+            }
+
+            
+        }
+        /*static bool Equals<T>(T obj,T obj2) where T : class
+        {
+            return object.Equals(obj, obj2);
+        }*/
+       
     }
 }

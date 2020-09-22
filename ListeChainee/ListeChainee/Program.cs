@@ -44,6 +44,22 @@ namespace ListeChainee
 
             maListe.GetAllElements();
 
+            Console.WriteLine("***********");
+            int eleToSupp = 21;
+            maListe.DelEleToIndice(eleToSupp);
+            Console.WriteLine("{0} a été supprimé:", eleToSupp);
+            maListe.GetAllElements();
+
+            Console.WriteLine("***********");        
+            eleToSupp = 33;
+            maListe.DelEleToIndice(eleToSupp);
+            Console.WriteLine("{0} a été supprimé:", eleToSupp);
+            maListe.GetAllElements();
+            Console.WriteLine("***********");
+            maListe.SuppListe();
+            Console.WriteLine("La liste entière a été suprimé:");
+            maListe.GetAllElements();
+
             /*
             for (int i = 0; i < 30; i++)
             {
