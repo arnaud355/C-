@@ -1,0 +1,11 @@
+C:\Users\arnaud.baleh\source\repos\C-\Event\Event\bin\Debug\netcoreapp3.1\Event.exe
+C:\Users\arnaud.baleh\source\repos\C-\Event\Event\bin\Debug\netcoreapp3.1\Event.deps.json
+C:\Users\arnaud.baleh\source\repos\C-\Event\Event\bin\Debug\netcoreapp3.1\Event.runtimeconfig.json
+C:\Users\arnaud.baleh\source\repos\C-\Event\Event\bin\Debug\netcoreapp3.1\Event.runtimeconfig.dev.json
+C:\Users\arnaud.baleh\source\repos\C-\Event\Event\bin\Debug\netcoreapp3.1\Event.dll
+C:\Users\arnaud.baleh\source\repos\C-\Event\Event\bin\Debug\netcoreapp3.1\Event.pdb
+C:\Users\arnaud.baleh\source\repos\C-\Event\Event\obj\Debug\netcoreapp3.1\Event.csprojAssemblyReference.cache
+C:\Users\arnaud.baleh\source\repos\C-\Event\Event\obj\Debug\netcoreapp3.1\Event.AssemblyInfoInputs.cache
+C:\Users\arnaud.baleh\source\repos\C-\Event\Event\obj\Debug\netcoreapp3.1\Event.AssemblyInfo.cs
+C:\Users\arnaud.baleh\source\repos\C-\Event\Event\obj\Debug\netcoreapp3.1\Event.dll
+C:\Users\arnaud.baleh\source\repos\C-\Event\Event\obj\Debug\netcoreapp3.1\Event.pdb
