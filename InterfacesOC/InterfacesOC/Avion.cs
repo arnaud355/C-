@@ -10,11 +10,21 @@ namespace InterfacesOC
      */
     public class Avion : IVolantMotorise, IRoulant
     {
-        public int NombrePropulseurs { get; set; }
-        public string NomDuCommandant { get; set; }
+        public int M_NombrePropulseurs { get; set; }
+        public string M_NomDuCommandant { get; set; }
+
+        public Avion()
+        {
+
+        }
+        public Avion(int NombrePropulseurs, string NomDuCommandant)
+        {
+            M_NombrePropulseurs = NombrePropulseurs;
+            M_NomDuCommandant = NomDuCommandant;
+        }
         public void Voler()
         {
-            Console.WriteLine("Je vole grâce à " + NombrePropulseurs + " moteurs");
+            Console.WriteLine("Je vole grâce à " + M_NombrePropulseurs + " moteurs");
         }
         public void DemarrerLeMoteur()
         {

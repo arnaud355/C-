@@ -1,0 +1,62 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "MonApp/1.0.0": {
+        "dependencies": {
+          "MaBibliotheque": "1.0.0"
+        },
+        "runtime": {
+          "MonApp.dll": {}
+        }
+      },
+      "MaBibliotheque/1.0.0": {
+        "runtime": {
+          "MaBibliotheque.dll": {}
+        }
+      },
+      "AForge.Math/2.2.5.0": {
+        "runtime": {
+          "AForge.Math.dll": {
+            "assemblyVersion": "2.2.5.0",
+            "fileVersion": "2.2.5.0"
+          }
+        }
+      },
+      "AForge/2.2.5.0": {
+        "runtime": {
+          "AForge.dll": {
+            "assemblyVersion": "2.2.5.0",
+            "fileVersion": "2.2.5.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MonApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MaBibliotheque/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AForge.Math/2.2.5.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AForge/2.2.5.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

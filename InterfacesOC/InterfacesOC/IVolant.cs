@@ -7,7 +7,7 @@ namespace InterfacesOC
     //C'est une interface que nous créons, dont vont hériter classe d'instances volantes
     public interface IVolant
     {
-        int NombrePropulseurs { get; set; }
+        int M_NombrePropulseurs { get; set; }
         void Voler();
     }
 }

@@ -1,0 +1,11 @@
+C:\Users\arnaud.baleh\source\repos\C-\GeneriqueIEnumerable\GeneriqueIEnumerable\bin\Debug\netcoreapp3.1\GeneriqueIEnumerable.exe
+C:\Users\arnaud.baleh\source\repos\C-\GeneriqueIEnumerable\GeneriqueIEnumerable\bin\Debug\netcoreapp3.1\GeneriqueIEnumerable.deps.json
+C:\Users\arnaud.baleh\source\repos\C-\GeneriqueIEnumerable\GeneriqueIEnumerable\bin\Debug\netcoreapp3.1\GeneriqueIEnumerable.runtimeconfig.json
+C:\Users\arnaud.baleh\source\repos\C-\GeneriqueIEnumerable\GeneriqueIEnumerable\bin\Debug\netcoreapp3.1\GeneriqueIEnumerable.runtimeconfig.dev.json
+C:\Users\arnaud.baleh\source\repos\C-\GeneriqueIEnumerable\GeneriqueIEnumerable\bin\Debug\netcoreapp3.1\GeneriqueIEnumerable.dll
+C:\Users\arnaud.baleh\source\repos\C-\GeneriqueIEnumerable\GeneriqueIEnumerable\bin\Debug\netcoreapp3.1\GeneriqueIEnumerable.pdb
+C:\Users\arnaud.baleh\source\repos\C-\GeneriqueIEnumerable\GeneriqueIEnumerable\obj\Debug\netcoreapp3.1\GeneriqueIEnumerable.csprojAssemblyReference.cache
+C:\Users\arnaud.baleh\source\repos\C-\GeneriqueIEnumerable\GeneriqueIEnumerable\obj\Debug\netcoreapp3.1\GeneriqueIEnumerable.AssemblyInfoInputs.cache
+C:\Users\arnaud.baleh\source\repos\C-\GeneriqueIEnumerable\GeneriqueIEnumerable\obj\Debug\netcoreapp3.1\GeneriqueIEnumerable.AssemblyInfo.cs
+C:\Users\arnaud.baleh\source\repos\C-\GeneriqueIEnumerable\GeneriqueIEnumerable\obj\Debug\netcoreapp3.1\GeneriqueIEnumerable.dll
+C:\Users\arnaud.baleh\source\repos\C-\GeneriqueIEnumerable\GeneriqueIEnumerable\obj\Debug\netcoreapp3.1\GeneriqueIEnumerable.pdb

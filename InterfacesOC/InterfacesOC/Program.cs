@@ -15,8 +15,8 @@ namespace InterfacesOC
             }
 
 
-            Oiseau oiseau = new Oiseau { NombrePropulseurs = 2 };
-            Avion avion = new Avion { NombrePropulseurs = 4, NomDuCommandant = "Nico" };
+            Oiseau oiseau = new Oiseau { M_NombrePropulseurs = 2 };
+            Avion avion = new Avion { M_NombrePropulseurs = 4, M_NomDuCommandant = "Nico" };
 
             List<IVolant> volants = new List<IVolant> { oiseau, avion };
             foreach (IVolant volant in volants)
@@ -27,7 +27,7 @@ namespace InterfacesOC
                 {
                     a.DemarrerLeMoteur();
                     a.Rouler();
-                    Console.WriteLine(a.NomDuCommandant);
+                    Console.WriteLine(a.M_NomDuCommandant);
                 }
             }
         }
