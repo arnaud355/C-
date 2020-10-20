@@ -1,0 +1,11 @@
+C:\Users\arnaud.baleh\source\repos\C-\DesignPatterns\codeImplementationCSharp\NaiveSingleton\NaiveSingleton\bin\Debug\netcoreapp3.1\NaiveSingleton.exe
+C:\Users\arnaud.baleh\source\repos\C-\DesignPatterns\codeImplementationCSharp\NaiveSingleton\NaiveSingleton\bin\Debug\netcoreapp3.1\NaiveSingleton.deps.json
+C:\Users\arnaud.baleh\source\repos\C-\DesignPatterns\codeImplementationCSharp\NaiveSingleton\NaiveSingleton\bin\Debug\netcoreapp3.1\NaiveSingleton.runtimeconfig.json
+C:\Users\arnaud.baleh\source\repos\C-\DesignPatterns\codeImplementationCSharp\NaiveSingleton\NaiveSingleton\bin\Debug\netcoreapp3.1\NaiveSingleton.runtimeconfig.dev.json
+C:\Users\arnaud.baleh\source\repos\C-\DesignPatterns\codeImplementationCSharp\NaiveSingleton\NaiveSingleton\bin\Debug\netcoreapp3.1\NaiveSingleton.dll
+C:\Users\arnaud.baleh\source\repos\C-\DesignPatterns\codeImplementationCSharp\NaiveSingleton\NaiveSingleton\bin\Debug\netcoreapp3.1\NaiveSingleton.pdb
+C:\Users\arnaud.baleh\source\repos\C-\DesignPatterns\codeImplementationCSharp\NaiveSingleton\NaiveSingleton\obj\Debug\netcoreapp3.1\NaiveSingleton.csprojAssemblyReference.cache
+C:\Users\arnaud.baleh\source\repos\C-\DesignPatterns\codeImplementationCSharp\NaiveSingleton\NaiveSingleton\obj\Debug\netcoreapp3.1\NaiveSingleton.AssemblyInfoInputs.cache
+C:\Users\arnaud.baleh\source\repos\C-\DesignPatterns\codeImplementationCSharp\NaiveSingleton\NaiveSingleton\obj\Debug\netcoreapp3.1\NaiveSingleton.AssemblyInfo.cs
+C:\Users\arnaud.baleh\source\repos\C-\DesignPatterns\codeImplementationCSharp\NaiveSingleton\NaiveSingleton\obj\Debug\netcoreapp3.1\NaiveSingleton.dll
+C:\Users\arnaud.baleh\source\repos\C-\DesignPatterns\codeImplementationCSharp\NaiveSingleton\NaiveSingleton\obj\Debug\netcoreapp3.1\NaiveSingleton.pdb

@@ -1,0 +1,10 @@
+C:\Users\arnaud.baleh\source\repos\C-\DesignPatterns\codeImplementationCSharp\Thread-safeSingleton\Thread-safeSingleton\bin\Debug\netcoreapp3.1\Thread-safeSingleton.exe
+C:\Users\arnaud.baleh\source\repos\C-\DesignPatterns\codeImplementationCSharp\Thread-safeSingleton\Thread-safeSingleton\bin\Debug\netcoreapp3.1\Thread-safeSingleton.deps.json
+C:\Users\arnaud.baleh\source\repos\C-\DesignPatterns\codeImplementationCSharp\Thread-safeSingleton\Thread-safeSingleton\bin\Debug\netcoreapp3.1\Thread-safeSingleton.runtimeconfig.json
+C:\Users\arnaud.baleh\source\repos\C-\DesignPatterns\codeImplementationCSharp\Thread-safeSingleton\Thread-safeSingleton\bin\Debug\netcoreapp3.1\Thread-safeSingleton.runtimeconfig.dev.json
+C:\Users\arnaud.baleh\source\repos\C-\DesignPatterns\codeImplementationCSharp\Thread-safeSingleton\Thread-safeSingleton\bin\Debug\netcoreapp3.1\Thread-safeSingleton.dll
+C:\Users\arnaud.baleh\source\repos\C-\DesignPatterns\codeImplementationCSharp\Thread-safeSingleton\Thread-safeSingleton\bin\Debug\netcoreapp3.1\Thread-safeSingleton.pdb
+C:\Users\arnaud.baleh\source\repos\C-\DesignPatterns\codeImplementationCSharp\Thread-safeSingleton\Thread-safeSingleton\obj\Debug\netcoreapp3.1\Thread-safeSingleton.AssemblyInfoInputs.cache
+C:\Users\arnaud.baleh\source\repos\C-\DesignPatterns\codeImplementationCSharp\Thread-safeSingleton\Thread-safeSingleton\obj\Debug\netcoreapp3.1\Thread-safeSingleton.AssemblyInfo.cs
+C:\Users\arnaud.baleh\source\repos\C-\DesignPatterns\codeImplementationCSharp\Thread-safeSingleton\Thread-safeSingleton\obj\Debug\netcoreapp3.1\Thread-safeSingleton.dll
+C:\Users\arnaud.baleh\source\repos\C-\DesignPatterns\codeImplementationCSharp\Thread-safeSingleton\Thread-safeSingleton\obj\Debug\netcoreapp3.1\Thread-safeSingleton.pdb
