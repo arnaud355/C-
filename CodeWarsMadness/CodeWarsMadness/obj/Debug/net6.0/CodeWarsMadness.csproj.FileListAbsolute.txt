@@ -1,0 +1,15 @@
+C:\Users\arnau\Documents\CodeWar\CSharp\CodeWarsMadness\CodeWarsMadness\bin\Debug\net6.0\CodeWarsMadness.exe
+C:\Users\arnau\Documents\CodeWar\CSharp\CodeWarsMadness\CodeWarsMadness\bin\Debug\net6.0\CodeWarsMadness.deps.json
+C:\Users\arnau\Documents\CodeWar\CSharp\CodeWarsMadness\CodeWarsMadness\bin\Debug\net6.0\CodeWarsMadness.runtimeconfig.json
+C:\Users\arnau\Documents\CodeWar\CSharp\CodeWarsMadness\CodeWarsMadness\bin\Debug\net6.0\CodeWarsMadness.dll
+C:\Users\arnau\Documents\CodeWar\CSharp\CodeWarsMadness\CodeWarsMadness\bin\Debug\net6.0\CodeWarsMadness.pdb
+C:\Users\arnau\Documents\CodeWar\CSharp\CodeWarsMadness\CodeWarsMadness\obj\Debug\net6.0\CodeWarsMadness.csproj.AssemblyReference.cache
+C:\Users\arnau\Documents\CodeWar\CSharp\CodeWarsMadness\CodeWarsMadness\obj\Debug\net6.0\CodeWarsMadness.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arnau\Documents\CodeWar\CSharp\CodeWarsMadness\CodeWarsMadness\obj\Debug\net6.0\CodeWarsMadness.AssemblyInfoInputs.cache
+C:\Users\arnau\Documents\CodeWar\CSharp\CodeWarsMadness\CodeWarsMadness\obj\Debug\net6.0\CodeWarsMadness.AssemblyInfo.cs
+C:\Users\arnau\Documents\CodeWar\CSharp\CodeWarsMadness\CodeWarsMadness\obj\Debug\net6.0\CodeWarsMadness.csproj.CoreCompileInputs.cache
+C:\Users\arnau\Documents\CodeWar\CSharp\CodeWarsMadness\CodeWarsMadness\obj\Debug\net6.0\CodeWarsMadness.dll
+C:\Users\arnau\Documents\CodeWar\CSharp\CodeWarsMadness\CodeWarsMadness\obj\Debug\net6.0\refint\CodeWarsMadness.dll
+C:\Users\arnau\Documents\CodeWar\CSharp\CodeWarsMadness\CodeWarsMadness\obj\Debug\net6.0\CodeWarsMadness.pdb
+C:\Users\arnau\Documents\CodeWar\CSharp\CodeWarsMadness\CodeWarsMadness\obj\Debug\net6.0\CodeWarsMadness.genruntimeconfig.cache
+C:\Users\arnau\Documents\CodeWar\CSharp\CodeWarsMadness\CodeWarsMadness\obj\Debug\net6.0\ref\CodeWarsMadness.dll

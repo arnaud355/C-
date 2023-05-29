@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "6BnV6/pwH7UclgeUGlxXU3kxqqQZ021bdHt7d4Je7KGem2fiK0lbqxiNYhf/UfqC07IzKaZOtncSRm31LCBeaw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\arnau\\Documents\\CodeWar\\CSharp\\CodeWarMadness2\\CodeWarMadness2\\CodeWarMadness2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\arnau\\.nuget\\packages\\mstest.testframework\\3.0.3\\mstest.testframework.3.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
