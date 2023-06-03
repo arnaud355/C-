@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arnau\\Documents\\CSharpProjects\\FarCryPrimalPlateau\\FarCryPrimalPlateau\\FarCryPrimalPlateau.csproj": {}
+    "C:\\Users\\arnau\\Documents\\CSharpProjects\\C-\\FarCryPrimalPlateau\\FarCryPrimalPlateau\\FarCryPrimalPlateau.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arnau\\Documents\\CSharpProjects\\FarCryPrimalPlateau\\FarCryPrimalPlateau\\FarCryPrimalPlateau.csproj": {
+    "C:\\Users\\arnau\\Documents\\CSharpProjects\\C-\\FarCryPrimalPlateau\\FarCryPrimalPlateau\\FarCryPrimalPlateau.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arnau\\Documents\\CSharpProjects\\FarCryPrimalPlateau\\FarCryPrimalPlateau\\FarCryPrimalPlateau.csproj",
+        "projectUniqueName": "C:\\Users\\arnau\\Documents\\CSharpProjects\\C-\\FarCryPrimalPlateau\\FarCryPrimalPlateau\\FarCryPrimalPlateau.csproj",
         "projectName": "FarCryPrimalPlateau",
-        "projectPath": "C:\\Users\\arnau\\Documents\\CSharpProjects\\FarCryPrimalPlateau\\FarCryPrimalPlateau\\FarCryPrimalPlateau.csproj",
+        "projectPath": "C:\\Users\\arnau\\Documents\\CSharpProjects\\C-\\FarCryPrimalPlateau\\FarCryPrimalPlateau\\FarCryPrimalPlateau.csproj",
         "packagesPath": "C:\\Users\\arnau\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arnau\\Documents\\CSharpProjects\\FarCryPrimalPlateau\\FarCryPrimalPlateau\\obj\\",
+        "outputPath": "C:\\Users\\arnau\\Documents\\CSharpProjects\\C-\\FarCryPrimalPlateau\\FarCryPrimalPlateau\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\arnau\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace FarCryPrimalPlateau
 {
-    public abstract class Human
+    public abstract class Human : IItem
     {
         protected string m_name { get; set; }
         protected int m_id = 0;
@@ -73,6 +73,11 @@ namespace FarCryPrimalPlateau
                 SetIsAlive(false);
                 Console.WriteLine("Mort de {0}",m_name);
             }
+        }
+
+        public void GetInfoOfItem()
+        {
+            Console.WriteLine("Je suis {0}, pts vie : {1},  pts vie : {2}", m_name, m_ptsVie);
         }
     }
 }

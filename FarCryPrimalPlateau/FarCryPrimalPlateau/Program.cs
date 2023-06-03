@@ -3,6 +3,7 @@
 
 
 using FarCryPrimalPlateau;
+using System;
 using System.Runtime.Intrinsics.X86;
 
 /*
@@ -48,7 +49,8 @@ while (continuer)
    
        
     if (partie == "o" || partie == "O")
-    {
+    {       
+
         Console.WriteLine(" Bon courage dans le monde d'Oros!");
         Izila Perso1Izila = new Izila("izilaPerso1", 12, 100, new Coords(Singleton.GetRandom(), Singleton.GetRandom()), "bleu", new Arme("Masse","1"),false);
         Izila Perso2Izila = new Izila("izilaPerso2", 22, 100, new Coords(Singleton.GetRandom(), Singleton.GetRandom()), "bleu", new Arme("Arc","1"),false);
@@ -86,8 +88,23 @@ while (continuer)
         UpgradeRepos arcUpgrade2 = new UpgradeRepos("non", "non", "oui", "non", "non","non", "non", "non");
         UpgradeRepos sagaieUpgrade = new UpgradeRepos("non", "non", "non", "oui", "non","non", "non", "non");
         UpgradeRepos sagaieUpgrade2 = new UpgradeRepos("non", "non", "non", "oui", "non","non", "non", "non");
-       
-        
+
+        Joueur takkar = new Joueur("Takkar", 100, new Coords(Singleton.GetRandom(), Singleton.GetRandom()), new Arme("Masse", "1"));
+
+        List<IItem> ItemsList = new List<IItem> { takkar,Perso1Izila, Perso2Izila, Batari, Uii,Perso1Udam,Perso2Udam,Mammouth1,Rhino1,Chevre1,Sanglier1,Loup1,Lion1,TigreDentSable1,graal,litRepos,litRepos2 };
+
+        foreach (IItem ItemList in ItemsList)
+        {
+            /*volant.Voler();
+            Avion a = volant as Avion;
+            if (a != null)
+            {
+                a.DemarrerLeMoteur();
+                a.Rouler();
+                Console.WriteLine(a.M_NomDuCommandant);
+            }*/
+        }
+
     }
     else
         {

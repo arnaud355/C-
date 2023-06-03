@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FarCryPrimalPlateau
 {
-    public abstract class Animal
+    public abstract class Animal : IItem
     {
         protected string m_name { get; set; }
         protected string m_espece { get; set; }
@@ -55,6 +55,11 @@ namespace FarCryPrimalPlateau
                 SetIsAlive(false);
                 Console.WriteLine("Mort de {0}", m_name);
             }
+        }
+
+        public void GetInfoOfItem()
+        {
+            Console.WriteLine("Je suis {0}, espece : {1},  pts vie : {2},  force : {3} ", m_name, m_espece,m_ptsVie,m_force);
         }
     }
 }

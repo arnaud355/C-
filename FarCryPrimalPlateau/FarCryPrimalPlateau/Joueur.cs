@@ -6,19 +6,33 @@ using System.Threading.Tasks;
 
 namespace FarCryPrimalPlateau
 {
-    public class Joueur
+    public class Joueur : IItem
     {
         private float m_ptsVie { get; set; }
         private string m_name { get; set; }
-        private int points { get; set; }
+
+        protected Coords m_coords;
 
         Arme m_arme { get; set; }
 
-        public Joueur(string name, float ptsVie, Arme arme)
+        public Joueur(string name, float ptsVie, Coords coords, Arme arme)
         {
             m_name = name;
             m_ptsVie = ptsVie;
             m_arme = arme;
+
+            if (Singleton.gamesCoordX.Contains(coords.X) && Singleton.gamesCoordX.Contains(coords.Y))
+            {
+                while (Singleton.gamesCoordX.Contains(coords.X) && Singleton.gamesCoordX.Contains(coords.Y))
+                {
+                    coords.X = Singleton.GetRandom();
+                    coords.Y = Singleton.GetRandom();
+                }
+            }
+
+            Singleton.gamesCoordX.Add(coords.X);
+            Singleton.gamesCoordY.Add(coords.X);
+            this.m_coords = coords;
         }
 
         ~Joueur()
@@ -260,6 +274,11 @@ namespace FarCryPrimalPlateau
             {
                 Console.WriteLine("Game Over");                
             }
+        }
+
+        public void GetInfoOfItem()
+        {
+            Console.WriteLine("Je suis {0}, pts vie : {1},  arme : {2}, coord X: {3}, coord Y : {4} ", m_name, m_ptsVie,m_arme, m_coords.X,m_coords.Y);
         }
     }
 }
