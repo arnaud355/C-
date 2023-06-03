@@ -1,0 +1,15 @@
+C:\Users\arnau\Documents\CSharpProjects\FarCryPrimalPlateau\FarCryPrimalPlateau\bin\Debug\net6.0\FarCryPrimalPlateau.exe
+C:\Users\arnau\Documents\CSharpProjects\FarCryPrimalPlateau\FarCryPrimalPlateau\bin\Debug\net6.0\FarCryPrimalPlateau.deps.json
+C:\Users\arnau\Documents\CSharpProjects\FarCryPrimalPlateau\FarCryPrimalPlateau\bin\Debug\net6.0\FarCryPrimalPlateau.runtimeconfig.json
+C:\Users\arnau\Documents\CSharpProjects\FarCryPrimalPlateau\FarCryPrimalPlateau\bin\Debug\net6.0\FarCryPrimalPlateau.dll
+C:\Users\arnau\Documents\CSharpProjects\FarCryPrimalPlateau\FarCryPrimalPlateau\bin\Debug\net6.0\FarCryPrimalPlateau.pdb
+C:\Users\arnau\Documents\CSharpProjects\FarCryPrimalPlateau\FarCryPrimalPlateau\obj\Debug\net6.0\FarCryPrimalPlateau.csproj.AssemblyReference.cache
+C:\Users\arnau\Documents\CSharpProjects\FarCryPrimalPlateau\FarCryPrimalPlateau\obj\Debug\net6.0\FarCryPrimalPlateau.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arnau\Documents\CSharpProjects\FarCryPrimalPlateau\FarCryPrimalPlateau\obj\Debug\net6.0\FarCryPrimalPlateau.AssemblyInfoInputs.cache
+C:\Users\arnau\Documents\CSharpProjects\FarCryPrimalPlateau\FarCryPrimalPlateau\obj\Debug\net6.0\FarCryPrimalPlateau.AssemblyInfo.cs
+C:\Users\arnau\Documents\CSharpProjects\FarCryPrimalPlateau\FarCryPrimalPlateau\obj\Debug\net6.0\FarCryPrimalPlateau.csproj.CoreCompileInputs.cache
+C:\Users\arnau\Documents\CSharpProjects\FarCryPrimalPlateau\FarCryPrimalPlateau\obj\Debug\net6.0\FarCryPrimalPlateau.dll
+C:\Users\arnau\Documents\CSharpProjects\FarCryPrimalPlateau\FarCryPrimalPlateau\obj\Debug\net6.0\refint\FarCryPrimalPlateau.dll
+C:\Users\arnau\Documents\CSharpProjects\FarCryPrimalPlateau\FarCryPrimalPlateau\obj\Debug\net6.0\FarCryPrimalPlateau.pdb
+C:\Users\arnau\Documents\CSharpProjects\FarCryPrimalPlateau\FarCryPrimalPlateau\obj\Debug\net6.0\FarCryPrimalPlateau.genruntimeconfig.cache
+C:\Users\arnau\Documents\CSharpProjects\FarCryPrimalPlateau\FarCryPrimalPlateau\obj\Debug\net6.0\ref\FarCryPrimalPlateau.dll
