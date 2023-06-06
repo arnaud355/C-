@@ -14,12 +14,13 @@ positionné en début de partie à un emplacement aléatoire fixe.
 
 Le joueur ne peut se déplacer que d'une seule case à la fois, vers la gauche, droite,
 en bas, en haut, dans les limites du plateau.
-Il démarre avec une massue de niveau 1 (3 niveaux).
+Il démarre avec une massue de niveau 1 (3 niveaux), si il tombe sur une case de changement d'arme,
+changement automatique arme, et arme mise au niveau de maitrise le plus bas, sans tenir compte
+de l'historique armes possédés.
 à chaque déplacement un tour en plus,
-à 50 tours max, la partie se termine, sauf si le joueur a trouvé le graal avant,
-ou si il meurt.
+La partie se termine qaund le joueur a trouvé le graal avant ou s'il meurt.
 
-Plateau de 49 cases, 13 ennemis, 5 cases lit de camps pour récupérer 25 pts de vie, 3
+Plateau de 49 cases, 13 ennemis, 5 cases lit de camps pour récupérer toute sa vie, 3
 cases où se trouve un arc, 2 pour la sagaie, 3 cases d'upgrade de l'arc, 3 cases upgrade
 masse, 2 cases upgrade sagaie, 2 cases plantes bleu pour augmenter pendant 3 tours la réactivité
 de plus 25.
@@ -28,9 +29,8 @@ Mis à part le joueur, tous les autres êtres vivant reste fixés à la même ca
 Réactivité de chaque ennemis et du joueur est fixé aléatoirement à chaque tour, entre 5 à 100.
 
 Si joueur tombe sur une case ennemis, comparaison des 2 réactivités, la plus forte peut
-attaquer en premier. S'ensuit combat à mort, le joueur prend plusieurs dizaine
-de pts de vie (110 pts vie max, commence à 110 pts de vie), selon adversaire,
-si il gagne, sinon game over.
+attaquer en premier. S'ensuit combat à mort, le joueur récupére 30pts de vie (jusqu à son max de vie), 
+à chaque combat victorieux, sinon game over.
 
  */
 
@@ -38,6 +38,7 @@ si il gagne, sinon game over.
 int[,] OrosArray = new int[7, 7];
 bool continuer = true;
 bool gameOver = false;
+int tour = 0;
 
 while (continuer)
 {
@@ -55,13 +56,13 @@ while (continuer)
     {       
 
         Console.WriteLine(" Bon courage dans le monde d'Oros!");
-        Izila Perso1Izila = new Izila(Singleton.GetRandomId(), "izilaPerso1", 100, Singleton.GetRandomReactivite(), new Coords(Singleton.GetRandom(), Singleton.GetRandom()), "bleu", new Arme("Masse","1"),false);
-        Izila Perso2Izila = new Izila(Singleton.GetRandomId(), "izilaPerso2", 100, Singleton.GetRandomReactivite(), new Coords(Singleton.GetRandom(), Singleton.GetRandom()), "bleu", new Arme("Arc","1"),false);
-        Izila Batari = new Izila(Singleton.GetRandomId(), "Batari", 120, Singleton.GetRandomReactivite(), new Coords(Singleton.GetRandom(), Singleton.GetRandom()), "bleu", new Arme("Sagaie","3"),true);
+        Izila Perso1Izila = new Izila(Singleton.GetRandomId(), "izilaPerso1", 100, Singleton.GetRandomReactivite(), new Coords(Singleton.GetRandom(), Singleton.GetRandom()), "bleu", new Arme("Masse","Low"),false);
+        Izila Perso2Izila = new Izila(Singleton.GetRandomId(), "izilaPerso2", 100, Singleton.GetRandomReactivite(), new Coords(Singleton.GetRandom(), Singleton.GetRandom()), "bleu", new Arme("Arc","Low"),false);
+        Izila Batari = new Izila(Singleton.GetRandomId(), "Batari", 120, Singleton.GetRandomReactivite(), new Coords(Singleton.GetRandom(), Singleton.GetRandom()), "bleu", new Arme("Sagaie","High"),true);
 
-        Udam Uii = new Udam(Singleton.GetRandomId(), "Uii", 120, Singleton.GetRandomReactivite(), new Coords(Singleton.GetRandom(), Singleton.GetRandom()), "marron", new Arme("Masse","3"),true);
-        Udam Perso1Udam = new Udam(Singleton.GetRandomId(), "udamPerso1", 100, Singleton.GetRandomReactivite(), new Coords(Singleton.GetRandom(), Singleton.GetRandom()), "marron fonce", new Arme("Sagaie","1"),false);
-        Udam Perso2Udam = new Udam(Singleton.GetRandomId(), "udamPerso2", 100, Singleton.GetRandomReactivite(), new Coords(Singleton.GetRandom(), Singleton.GetRandom()), "marron", new Arme("Masse","2"),false);
+        Udam Uii = new Udam(Singleton.GetRandomId(), "Uii", 120, Singleton.GetRandomReactivite(), new Coords(Singleton.GetRandom(), Singleton.GetRandom()), "marron", new Arme("Masse","High"),true);
+        Udam Perso1Udam = new Udam(Singleton.GetRandomId(), "udamPerso1", 100, Singleton.GetRandomReactivite(), new Coords(Singleton.GetRandom(), Singleton.GetRandom()), "marron fonce", new Arme("Sagaie","Low"),false);
+        Udam Perso2Udam = new Udam(Singleton.GetRandomId(), "udamPerso2", 100, Singleton.GetRandomReactivite(), new Coords(Singleton.GetRandom(), Singleton.GetRandom()), "marron", new Arme("Masse","Medium"),false);
 
         Herbivore Mammouth1 = new Herbivore(Singleton.GetRandomId(), "Mammouth1", "Mammouth", 130, 150f, Singleton.GetRandomReactivite(), new Coords(Singleton.GetRandom(), Singleton.GetRandom()), "Chargeur");
         Herbivore Rhino1 = new Herbivore(Singleton.GetRandomId(), "Rhino1", "Rhinoceros", 105, 110f, Singleton.GetRandomReactivite(), new Coords(Singleton.GetRandom(), Singleton.GetRandom()), "Chargeur");
@@ -92,7 +93,7 @@ while (continuer)
         UpgradeRepos sagaieUpgrade = new UpgradeRepos(Singleton.GetRandomId(), NomUpgrade.upgradeSagaie, new Coords(Singleton.GetRandom(), Singleton.GetRandom()));
         UpgradeRepos sagaieUpgrade2 = new UpgradeRepos(Singleton.GetRandomId(), NomUpgrade.upgradeSagaie, new Coords(Singleton.GetRandom(), Singleton.GetRandom()));
 
-        Joueur takkar = new Joueur(Singleton.GetRandomId(), "Takkar", 100, Singleton.GetRandomReactivite(), new Coords(Singleton.GetRandom(), Singleton.GetRandom()), new Arme("Masse", "1"));
+        Joueur takkar = new Joueur(Singleton.GetRandomId(), "Takkar", 110, Singleton.GetRandomReactivite(), new Coords(Singleton.GetRandom(), Singleton.GetRandom()), new Arme("Masse", "Low"));
 
         // List de toutes les intances du jeu
         List<IItem> InstancesList = new List<IItem> { takkar,Perso1Izila, Perso2Izila, Batari, Uii,Perso1Udam,Perso2Udam,Mammouth1,Rhino1,Chevre1,Sanglier1,Loup1,Lion1,TigreDentSable1,graal,litRepos,litRepos2 };
@@ -117,6 +118,7 @@ while (continuer)
 
         while (!gameOver)
         {
+            takkar.GetInfoOfItem();
             Console.WriteLine("Entrez une direction avec une des fleches pour vous deplacez");
             inputTouch = Console.ReadKey(true);
             int nextMoveX = 0;
@@ -136,7 +138,8 @@ while (continuer)
                     }
                     else
                     {
-                        takkar.SetPosY(nextMoveY);
+                        tour++;
+                        takkar.SetPosY(nextMoveY);                        
                         // Si une instance est bien présente et non zéro
                         if (OrosArray[takkar.GetPosX(), nextMoveY] != 0)
                         {
@@ -169,12 +172,16 @@ while (continuer)
                                             {
                                                 if(izila.GetHeros() == true)
                                                 {
+                                                    Console.WriteLine("{0} attaque {1} ", izila.GetName(), takkar.GetName());
                                                     izila.AttaqueSpecialHeros(true, takkar);
+                                                    Console.WriteLine("{0} attaque {1} ", takkar.GetName(), izila.GetName());
                                                     takkar.Attaque(izila);
                                                 }
                                                 else
                                                 {
+                                                    Console.WriteLine("{0} attaque {1} ", izila.GetName(), takkar.GetName());
                                                     izila.Attaque(takkar);
+                                                    Console.WriteLine("{0} attaque {1} ", takkar.GetName(), izila.GetName());
                                                     takkar.Attaque(izila);
                                                 }                                               
                                             }
@@ -182,12 +189,16 @@ while (continuer)
                                             {
                                                 if (izila.GetHeros() == true)
                                                 {
+                                                    Console.WriteLine("{0} attaque {1} ", takkar.GetName(), izila.GetName());
                                                     takkar.Attaque(izila);
+                                                    Console.WriteLine("{0} attaque {1} ", izila.GetName(), takkar.GetName());
                                                     izila.AttaqueSpecialHeros(true, takkar);                                                    
                                                 }
                                                 else
                                                 {
+                                                    Console.WriteLine("{0} attaque {1} ", takkar.GetName(), izila.GetName());
                                                     takkar.Attaque(izila);
+                                                    Console.WriteLine("{0} attaque {1} ", izila.GetName(), takkar.GetName());
                                                     izila.Attaque(takkar);                                                    
                                                 }
                                             }
@@ -196,26 +207,379 @@ while (continuer)
                                         if(izila != null && izila.GetIsAlive() == false)
                                         {
                                             OrosArray[takkar.GetPosX(), nextMoveY] = 0;
-                                            izila = null;
+                                            izila = null;                                           
                                         }
 
                                         if(takkar.IsAlive() == false)
                                         {
                                             gameOver = true;
                                         }
+                                        else
+                                        {
+                                            takkar.SetPtsVie(30);
+                                        }
                                     }                                    
                                     break;
                                 case "Udam":
-                                    // code block
+                                    var instanceUdam =
+                                    from objectEnCours in InstancesList
+                                    where (objectEnCours.GetId() == idToFind)
+                                    select objectEnCours;
+
+                                    Udam udam = instanceUdam as Udam;
+
+                                    if (udam != null)
+                                    {
+                                        while (udam.GetIsAlive() && takkar.IsAlive())
+                                        {
+                                            if (udam.GetReactivite() > takkar.GetReactivite())
+                                            {
+                                                if (udam.GetHeros() == true)
+                                                {
+                                                    Console.WriteLine("{0} attaque {1} ", udam.GetName(), takkar.GetName());
+                                                    udam.AttaqueSpecialHeros(true, takkar);
+                                                    Console.WriteLine("{0} attaque {1} ", takkar.GetName(), udam.GetName());
+                                                    takkar.Attaque(udam);
+                                                }
+                                                else
+                                                {
+                                                    Console.WriteLine("{0} attaque {1} ", udam.GetName(), takkar.GetName());
+                                                    udam.Attaque(takkar);
+                                                    Console.WriteLine("{0} attaque {1} ", takkar.GetName(), udam.GetName());
+                                                    takkar.Attaque(udam);
+                                                }
+                                            }
+                                            else
+                                            {
+                                                if (udam.GetHeros() == true)
+                                                {
+                                                    Console.WriteLine("{0} attaque {1} ", takkar.GetName(), udam.GetName());
+                                                    takkar.Attaque(udam);
+                                                    Console.WriteLine("{0} attaque {1} ", udam.GetName(), takkar.GetName());
+                                                    udam.AttaqueSpecialHeros(true, takkar);
+                                                }
+                                                else
+                                                {
+                                                    Console.WriteLine("{0} attaque {1} ", takkar.GetName(), udam.GetName());
+                                                    takkar.Attaque(udam);
+                                                    Console.WriteLine("{0} attaque {1} ", udam.GetName(), takkar.GetName());
+                                                    udam.Attaque(takkar);
+                                                }
+                                            }
+                                        }
+
+                                        if (udam != null && udam.GetIsAlive() == false)
+                                        {
+                                            OrosArray[takkar.GetPosX(), nextMoveY] = 0;
+                                            udam = null;
+                                            takkar.SetPtsVie(30);
+                                        }
+
+                                        if (takkar.IsAlive() == false)
+                                        {
+                                            gameOver = true;
+                                        }
+                                        else
+                                        {
+                                            takkar.SetPtsVie(30);
+                                        }
+                                    }
                                     break;
                                 case "Herbivore":
-                                    // code block
+                                    var instanceHerbivore =
+                                    from objectEnCours in InstancesList
+                                    where (objectEnCours.GetId() == idToFind)
+                                    select objectEnCours;
+
+                                    Herbivore herbivore = instanceHerbivore as Herbivore;
+
+                                    if (herbivore != null)
+                                    {
+                                        while (herbivore.GetIsAlive() && takkar.IsAlive())
+                                        {
+                                            if (herbivore.GetReactivite() > takkar.GetReactivite())
+                                            {                                              
+                                                Console.WriteLine("{0} attaque {1} ", herbivore.GetName(), takkar.GetName());
+                                                herbivore.AttaqueHerbivore(takkar);
+                                                Console.WriteLine("{0} attaque {1} ", takkar.GetName(), herbivore.GetName());
+                                                takkar.Attaque(herbivore);                                                
+                                            }
+                                            else
+                                            {                                                
+                                                Console.WriteLine("{0} attaque {1} ", takkar.GetName(), herbivore.GetName());
+                                                takkar.Attaque(herbivore);
+                                                Console.WriteLine("{0} attaque {1} ", herbivore.GetName(), herbivore.GetName());
+                                                herbivore.AttaqueHerbivore(takkar);
+                                                
+                                            }
+                                        }
+
+                                        if (herbivore != null && herbivore.GetIsAlive() == false)
+                                        {
+                                            OrosArray[takkar.GetPosX(), nextMoveY] = 0;
+                                            herbivore = null;
+                                            takkar.SetPtsVie(30);
+                                        }
+
+                                        if (takkar.IsAlive() == false)
+                                        {
+                                            gameOver = true;
+                                        }
+                                        else
+                                        {
+                                            takkar.SetPtsVie(30);
+                                        }
+                                    }
                                     break;
                                 case "Carnivore":
-                                    // code block
+                                    var instanceCarnivore =
+                                    from objectEnCours in InstancesList
+                                    where (objectEnCours.GetId() == idToFind)
+                                    select objectEnCours;
+
+                                    Carnivore carnivore = instanceCarnivore as Carnivore;
+
+                                    if (carnivore != null)
+                                    {
+                                        while (carnivore.GetIsAlive() && takkar.IsAlive())
+                                        {
+                                            if (carnivore.GetReactivite() > takkar.GetReactivite())
+                                            {
+                                                Console.WriteLine("{0} attaque {1} ", carnivore.GetName(), takkar.GetName());
+                                                carnivore.AttaqueCarnivore(takkar);
+                                                Console.WriteLine("{0} attaque {1} ", takkar.GetName(), carnivore.GetName());
+                                                takkar.Attaque(carnivore);
+                                            }
+                                            else
+                                            {
+                                                Console.WriteLine("{0} attaque {1} ", takkar.GetName(), carnivore.GetName());
+                                                takkar.Attaque(carnivore);
+                                                Console.WriteLine("{0} attaque {1} ", carnivore.GetName(), carnivore.GetName());
+                                                carnivore.AttaqueCarnivore(takkar);
+
+                                            }
+                                        }
+
+                                        if (carnivore != null && carnivore.GetIsAlive() == false)
+                                        {
+                                            OrosArray[takkar.GetPosX(), nextMoveY] = 0;
+                                            carnivore = null;
+                                        }
+
+                                        if (takkar.IsAlive() == false)
+                                        {
+                                            gameOver = true;
+                                        }
+                                        else
+                                        {
+                                            takkar.SetPtsVie(30);
+                                        }
+                                    }
                                     break;
                                 case "UpgradeRepos":
-                                    // code block
+                                    var instanceUpgradeRepos =
+                                    from objectEnCours in InstancesList
+                                    where (objectEnCours.GetId() == idToFind)
+                                    select objectEnCours;
+
+                                    UpgradeRepos upgradeRepos = instanceUpgradeRepos as UpgradeRepos;
+
+                                    if (upgradeRepos != null)
+                                    {
+                                        switch (upgradeRepos.GetNomUpgrade())
+                                        {
+                                            case "graal":
+                                                Console.WriteLine("Congratulation !!! Vous avez gagné");
+                                                gameOver = true;
+                                                break;
+                                            case "litCamps":
+                                                Console.WriteLine("zzzz Dodo !");
+                                                takkar.SetPtsVie(110);
+                                                break;
+                                            case "upgradeMasse":                                               
+                                                if(takkar.GetNomArmeJoueur() == "Masse")
+                                                {
+                                                    switch (takkar.GetLevelArmeJoueur())
+                                                    {
+                                                        case "Low":
+                                                            takkar.SetLevelArmeJoueur("Medium");
+                                                            break;
+                                                        case "Medium":
+                                                            takkar.SetLevelArmeJoueur("High");
+                                                            break;
+                                                        default:
+                                                            Console.WriteLine("Pas d'upgrade dispo");
+                                                            break;
+                                                    }
+                                                }                                             
+                                                break;
+                                            case "upgradeArc":
+                                                if (takkar.GetNomArmeJoueur() == "Arc")
+                                                {
+                                                    switch (takkar.GetLevelArmeJoueur())
+                                                    {
+                                                        case "Low":
+                                                            takkar.SetLevelArmeJoueur("Medium");
+                                                            break;
+                                                        case "Medium":
+                                                            takkar.SetLevelArmeJoueur("High");
+                                                            break;
+                                                        default:
+                                                            Console.WriteLine("Pas d'upgrade dispo");
+                                                            break;
+                                                    }
+                                                }
+                                                break;
+                                            case "upgradeSagaie":
+                                                if (takkar.GetNomArmeJoueur() == "Sagaie")
+                                                {
+                                                    switch (takkar.GetLevelArmeJoueur())
+                                                    {
+                                                        case "Low":
+                                                            takkar.SetLevelArmeJoueur("Medium");
+                                                            break;
+                                                        case "Medium":
+                                                            takkar.SetLevelArmeJoueur("High");
+                                                            break;
+                                                        default:
+                                                            Console.WriteLine("Pas d'upgrade dispo");
+                                                            break;
+                                                    }
+                                                }
+                                                break;
+                                            case "masse":
+                                                switch (takkar.GetNomArmeJoueur())
+                                                {
+                                                    case "Masse":
+                                                        Console.WriteLine("Arme déja possédée");
+                                                        break;
+                                                    case "Arc":
+                                                        takkar.SetNomArmeJoueur("Arc");
+             
+                                                        switch (takkar.GetLevelArmeJoueur())
+                                                        {
+                                                            case "Medium":
+                                                                takkar.SetLevelArmeJoueur("Low");
+                                                                break;
+                                                            case "High":
+                                                                takkar.SetLevelArmeJoueur("Low");
+                                                                break;
+                                                            default:
+                                                                Console.WriteLine("Pas d'upgrade dispo");
+                                                                break;
+                                                        }
+                                                         break;
+                                                               
+                                                    case "Sagaie":
+                                                        takkar.SetNomArmeJoueur("Sagaie");
+                                                        switch (takkar.GetLevelArmeJoueur())
+                                                        {
+                                                            case "Medium":
+                                                                takkar.SetLevelArmeJoueur("Low");
+                                                                break;
+                                                            case "High":
+                                                                takkar.SetLevelArmeJoueur("Low");
+                                                                break;
+                                                            default:
+                                                                Console.WriteLine("Pas d'upgrade dispo");
+                                                                break;
+                                                        }
+                                                        break;
+                                                    default:
+                                                        Console.WriteLine("Pas d'arme dispo");
+                                                        break;
+                                                }
+                                                break;
+                                            case "arc":
+                                                switch (takkar.GetNomArmeJoueur())
+                                                {
+                                                    case "Masse":
+                                                        takkar.SetNomArmeJoueur("Masse");
+                                                        switch (takkar.GetLevelArmeJoueur())
+                                                        {
+                                                            case "Medium":
+                                                                takkar.SetLevelArmeJoueur("Low");
+                                                                break;
+                                                            case "High":
+                                                                takkar.SetLevelArmeJoueur("Low");
+                                                                break;
+                                                            default:
+                                                                Console.WriteLine("Pas d'upgrade dispo");
+                                                                break;
+                                                        }
+                                                        break;
+                                                    case "Arc":
+                                                        Console.WriteLine("Arme déja possédée");
+                                                        break;
+                                                    case "Sagaie":
+                                                        takkar.SetNomArmeJoueur("Sagaie");
+                                                        switch (takkar.GetLevelArmeJoueur())
+                                                        {
+                                                            case "Medium":
+                                                                takkar.SetLevelArmeJoueur("Low");
+                                                                break;
+                                                            case "High":
+                                                                takkar.SetLevelArmeJoueur("Low");
+                                                                break;
+                                                            default:
+                                                                Console.WriteLine("Pas d'upgrade dispo");
+                                                                break;
+                                                        }
+                                                        break;
+                                                    default:
+                                                        Console.WriteLine("Pas d'arme dispo");
+                                                        break;
+                                                }
+                                                break;
+                                            case "sagaie":
+                                                switch (takkar.GetNomArmeJoueur())
+                                                {
+                                                    case "Masse":
+                                                        takkar.SetNomArmeJoueur("Masse");
+                                                        switch (takkar.GetLevelArmeJoueur())
+                                                        {
+                                                            case "Medium":
+                                                                takkar.SetLevelArmeJoueur("Low");
+                                                                break;
+                                                            case "High":
+                                                                takkar.SetLevelArmeJoueur("Low");
+                                                                break;
+                                                            default:
+                                                                Console.WriteLine("Pas d'upgrade dispo");
+                                                                break;
+                                                        }
+                                                        break;
+                                                    case "Arc":
+                                                        takkar.SetNomArmeJoueur("Arc");
+                                                        switch (takkar.GetLevelArmeJoueur())
+                                                        {
+                                                            case "Medium":
+                                                                takkar.SetLevelArmeJoueur("Low");
+                                                                break;
+                                                            case "High":
+                                                                takkar.SetLevelArmeJoueur("Low");
+                                                                break;
+                                                            default:
+                                                                Console.WriteLine("Pas d'upgrade dispo");
+                                                                break;
+                                                        }
+                                                        break;
+                                                    case "Sagaie":
+                                                        Console.WriteLine("Arme déja possédée");
+                                                        break;
+                                                    default:
+                                                        Console.WriteLine("Pas d'arme dispo");
+                                                        break;
+                                                }
+                                                break;
+                                            default:
+                                                Console.WriteLine("pas d'upgrade dispo");
+                                                break;
+                                        }
+
+                                        OrosArray[takkar.GetPosX(), nextMoveY] = 0;
+                                        upgradeRepos = null;                                     
+                                    }
                                     break;
                                 default:
                                     Console.WriteLine("Classe non trouvée");
@@ -235,7 +599,456 @@ while (continuer)
                     }
                     else
                     {
+                        tour++;
                         takkar.SetPosY(nextMoveY);
+
+                        // Si une instance est bien présente et non zéro
+                        if (OrosArray[takkar.GetPosX(), nextMoveY] != 0)
+                        {
+                            int idToFind = OrosArray[takkar.GetPosX(), nextMoveY];
+
+                            var instanceQuery =
+                            from instanceEnCours in InstancesList
+                            where (instanceEnCours.GetId() == idToFind)
+                            select instanceEnCours;
+
+                            Type instance = instanceQuery.GetType();
+
+                            switch (instance.Name)
+                            {
+
+                                case "Izila":
+
+                                    var instanceIzila =
+                                    from objectEnCours in InstancesList
+                                    where (objectEnCours.GetId() == idToFind)
+                                    select objectEnCours;
+
+                                    Izila izila = instanceIzila as Izila;
+
+                                    if (izila != null)
+                                    {
+                                        while (izila.GetIsAlive() && takkar.IsAlive())
+                                        {
+                                            if (izila.GetReactivite() > takkar.GetReactivite())
+                                            {
+                                                if (izila.GetHeros() == true)
+                                                {
+                                                    Console.WriteLine("{0} attaque {1} ", izila.GetName(), takkar.GetName());
+                                                    izila.AttaqueSpecialHeros(true, takkar);
+                                                    Console.WriteLine("{0} attaque {1} ", takkar.GetName(), izila.GetName());
+                                                    takkar.Attaque(izila);
+                                                }
+                                                else
+                                                {
+                                                    Console.WriteLine("{0} attaque {1} ", izila.GetName(), takkar.GetName());
+                                                    izila.Attaque(takkar);
+                                                    Console.WriteLine("{0} attaque {1} ", takkar.GetName(), izila.GetName());
+                                                    takkar.Attaque(izila);
+                                                }
+                                            }
+                                            else
+                                            {
+                                                if (izila.GetHeros() == true)
+                                                {
+                                                    Console.WriteLine("{0} attaque {1} ", takkar.GetName(), izila.GetName());
+                                                    takkar.Attaque(izila);
+                                                    Console.WriteLine("{0} attaque {1} ", izila.GetName(), takkar.GetName());
+                                                    izila.AttaqueSpecialHeros(true, takkar);
+                                                }
+                                                else
+                                                {
+                                                    Console.WriteLine("{0} attaque {1} ", takkar.GetName(), izila.GetName());
+                                                    takkar.Attaque(izila);
+                                                    Console.WriteLine("{0} attaque {1} ", izila.GetName(), takkar.GetName());
+                                                    izila.Attaque(takkar);
+                                                }
+                                            }
+                                        }
+
+                                        if (izila != null && izila.GetIsAlive() == false)
+                                        {
+                                            OrosArray[takkar.GetPosX(), nextMoveY] = 0;
+                                            izila = null;
+                                        }
+
+                                        if (takkar.IsAlive() == false)
+                                        {
+                                            gameOver = true;
+                                        }
+                                        else
+                                        {
+                                            takkar.SetPtsVie(30);
+                                        }
+                                    }
+                                    break;
+                                case "Udam":
+                                    var instanceUdam =
+                                    from objectEnCours in InstancesList
+                                    where (objectEnCours.GetId() == idToFind)
+                                    select objectEnCours;
+
+                                    Udam udam = instanceUdam as Udam;
+
+                                    if (udam != null)
+                                    {
+                                        while (udam.GetIsAlive() && takkar.IsAlive())
+                                        {
+                                            if (udam.GetReactivite() > takkar.GetReactivite())
+                                            {
+                                                if (udam.GetHeros() == true)
+                                                {
+                                                    Console.WriteLine("{0} attaque {1} ", udam.GetName(), takkar.GetName());
+                                                    udam.AttaqueSpecialHeros(true, takkar);
+                                                    Console.WriteLine("{0} attaque {1} ", takkar.GetName(), udam.GetName());
+                                                    takkar.Attaque(udam);
+                                                }
+                                                else
+                                                {
+                                                    Console.WriteLine("{0} attaque {1} ", udam.GetName(), takkar.GetName());
+                                                    udam.Attaque(takkar);
+                                                    Console.WriteLine("{0} attaque {1} ", takkar.GetName(), udam.GetName());
+                                                    takkar.Attaque(udam);
+                                                }
+                                            }
+                                            else
+                                            {
+                                                if (udam.GetHeros() == true)
+                                                {
+                                                    Console.WriteLine("{0} attaque {1} ", takkar.GetName(), udam.GetName());
+                                                    takkar.Attaque(udam);
+                                                    Console.WriteLine("{0} attaque {1} ", udam.GetName(), takkar.GetName());
+                                                    udam.AttaqueSpecialHeros(true, takkar);
+                                                }
+                                                else
+                                                {
+                                                    Console.WriteLine("{0} attaque {1} ", takkar.GetName(), udam.GetName());
+                                                    takkar.Attaque(udam);
+                                                    Console.WriteLine("{0} attaque {1} ", udam.GetName(), takkar.GetName());
+                                                    udam.Attaque(takkar);
+                                                }
+                                            }
+                                        }
+
+                                        if (udam != null && udam.GetIsAlive() == false)
+                                        {
+                                            OrosArray[takkar.GetPosX(), nextMoveY] = 0;
+                                            udam = null;
+                                            takkar.SetPtsVie(30);
+                                        }
+
+                                        if (takkar.IsAlive() == false)
+                                        {
+                                            gameOver = true;
+                                        }
+                                        else
+                                        {
+                                            takkar.SetPtsVie(30);
+                                        }
+                                    }
+                                    break;
+                                case "Herbivore":
+                                    var instanceHerbivore =
+                                    from objectEnCours in InstancesList
+                                    where (objectEnCours.GetId() == idToFind)
+                                    select objectEnCours;
+
+                                    Herbivore herbivore = instanceHerbivore as Herbivore;
+
+                                    if (herbivore != null)
+                                    {
+                                        while (herbivore.GetIsAlive() && takkar.IsAlive())
+                                        {
+                                            if (herbivore.GetReactivite() > takkar.GetReactivite())
+                                            {
+                                                Console.WriteLine("{0} attaque {1} ", herbivore.GetName(), takkar.GetName());
+                                                herbivore.AttaqueHerbivore(takkar);
+                                                Console.WriteLine("{0} attaque {1} ", takkar.GetName(), herbivore.GetName());
+                                                takkar.Attaque(herbivore);
+                                            }
+                                            else
+                                            {
+                                                Console.WriteLine("{0} attaque {1} ", takkar.GetName(), herbivore.GetName());
+                                                takkar.Attaque(herbivore);
+                                                Console.WriteLine("{0} attaque {1} ", herbivore.GetName(), herbivore.GetName());
+                                                herbivore.AttaqueHerbivore(takkar);
+
+                                            }
+                                        }
+
+                                        if (herbivore != null && herbivore.GetIsAlive() == false)
+                                        {
+                                            OrosArray[takkar.GetPosX(), nextMoveY] = 0;
+                                            herbivore = null;
+                                            takkar.SetPtsVie(30);
+                                        }
+
+                                        if (takkar.IsAlive() == false)
+                                        {
+                                            gameOver = true;
+                                        }
+                                        else
+                                        {
+                                            takkar.SetPtsVie(30);
+                                        }
+                                    }
+                                    break;
+                                case "Carnivore":
+                                    var instanceCarnivore =
+                                    from objectEnCours in InstancesList
+                                    where (objectEnCours.GetId() == idToFind)
+                                    select objectEnCours;
+
+                                    Carnivore carnivore = instanceCarnivore as Carnivore;
+
+                                    if (carnivore != null)
+                                    {
+                                        while (carnivore.GetIsAlive() && takkar.IsAlive())
+                                        {
+                                            if (carnivore.GetReactivite() > takkar.GetReactivite())
+                                            {
+                                                Console.WriteLine("{0} attaque {1} ", carnivore.GetName(), takkar.GetName());
+                                                carnivore.AttaqueCarnivore(takkar);
+                                                Console.WriteLine("{0} attaque {1} ", takkar.GetName(), carnivore.GetName());
+                                                takkar.Attaque(carnivore);
+                                            }
+                                            else
+                                            {
+                                                Console.WriteLine("{0} attaque {1} ", takkar.GetName(), carnivore.GetName());
+                                                takkar.Attaque(carnivore);
+                                                Console.WriteLine("{0} attaque {1} ", carnivore.GetName(), carnivore.GetName());
+                                                carnivore.AttaqueCarnivore(takkar);
+
+                                            }
+                                        }
+
+                                        if (carnivore != null && carnivore.GetIsAlive() == false)
+                                        {
+                                            OrosArray[takkar.GetPosX(), nextMoveY] = 0;
+                                            carnivore = null;
+                                        }
+
+                                        if (takkar.IsAlive() == false)
+                                        {
+                                            gameOver = true;
+                                        }
+                                        else
+                                        {
+                                            takkar.SetPtsVie(30);
+                                        }
+                                    }
+                                    break;
+                                case "UpgradeRepos":
+                                    var instanceUpgradeRepos =
+                                    from objectEnCours in InstancesList
+                                    where (objectEnCours.GetId() == idToFind)
+                                    select objectEnCours;
+
+                                    UpgradeRepos upgradeRepos = instanceUpgradeRepos as UpgradeRepos;
+
+                                    if (upgradeRepos != null)
+                                    {
+                                        switch (upgradeRepos.GetNomUpgrade())
+                                        {
+                                            case "graal":
+                                                Console.WriteLine("Congratulation !!! Vous avez gagné");
+                                                gameOver = true;
+                                                break;
+                                            case "litCamps":
+                                                Console.WriteLine("zzzz Dodo !");
+                                                takkar.SetPtsVie(110);
+                                                break;
+                                            case "upgradeMasse":
+                                                if (takkar.GetNomArmeJoueur() == "Masse")
+                                                {
+                                                    switch (takkar.GetLevelArmeJoueur())
+                                                    {
+                                                        case "Low":
+                                                            takkar.SetLevelArmeJoueur("Medium");
+                                                            break;
+                                                        case "Medium":
+                                                            takkar.SetLevelArmeJoueur("High");
+                                                            break;
+                                                        default:
+                                                            Console.WriteLine("Pas d'upgrade dispo");
+                                                            break;
+                                                    }
+                                                }
+                                                break;
+                                            case "upgradeArc":
+                                                if (takkar.GetNomArmeJoueur() == "Arc")
+                                                {
+                                                    switch (takkar.GetLevelArmeJoueur())
+                                                    {
+                                                        case "Low":
+                                                            takkar.SetLevelArmeJoueur("Medium");
+                                                            break;
+                                                        case "Medium":
+                                                            takkar.SetLevelArmeJoueur("High");
+                                                            break;
+                                                        default:
+                                                            Console.WriteLine("Pas d'upgrade dispo");
+                                                            break;
+                                                    }
+                                                }
+                                                break;
+                                            case "upgradeSagaie":
+                                                if (takkar.GetNomArmeJoueur() == "Sagaie")
+                                                {
+                                                    switch (takkar.GetLevelArmeJoueur())
+                                                    {
+                                                        case "Low":
+                                                            takkar.SetLevelArmeJoueur("Medium");
+                                                            break;
+                                                        case "Medium":
+                                                            takkar.SetLevelArmeJoueur("High");
+                                                            break;
+                                                        default:
+                                                            Console.WriteLine("Pas d'upgrade dispo");
+                                                            break;
+                                                    }
+                                                }
+                                                break;
+                                            case "masse":
+                                                switch (takkar.GetNomArmeJoueur())
+                                                {
+                                                    case "Masse":
+                                                        Console.WriteLine("Arme déja possédée");
+                                                        break;
+                                                    case "Arc":
+                                                        takkar.SetNomArmeJoueur("Arc");
+
+                                                        switch (takkar.GetLevelArmeJoueur())
+                                                        {
+                                                            case "Medium":
+                                                                takkar.SetLevelArmeJoueur("Low");
+                                                                break;
+                                                            case "High":
+                                                                takkar.SetLevelArmeJoueur("Low");
+                                                                break;
+                                                            default:
+                                                                Console.WriteLine("Pas d'upgrade dispo");
+                                                                break;
+                                                        }
+                                                        break;
+
+                                                    case "Sagaie":
+                                                        takkar.SetNomArmeJoueur("Sagaie");
+                                                        switch (takkar.GetLevelArmeJoueur())
+                                                        {
+                                                            case "Medium":
+                                                                takkar.SetLevelArmeJoueur("Low");
+                                                                break;
+                                                            case "High":
+                                                                takkar.SetLevelArmeJoueur("Low");
+                                                                break;
+                                                            default:
+                                                                Console.WriteLine("Pas d'upgrade dispo");
+                                                                break;
+                                                        }
+                                                        break;
+                                                    default:
+                                                        Console.WriteLine("Pas d'arme dispo");
+                                                        break;
+                                                }
+                                                break;
+                                            case "arc":
+                                                switch (takkar.GetNomArmeJoueur())
+                                                {
+                                                    case "Masse":
+                                                        takkar.SetNomArmeJoueur("Masse");
+                                                        switch (takkar.GetLevelArmeJoueur())
+                                                        {
+                                                            case "Medium":
+                                                                takkar.SetLevelArmeJoueur("Low");
+                                                                break;
+                                                            case "High":
+                                                                takkar.SetLevelArmeJoueur("Low");
+                                                                break;
+                                                            default:
+                                                                Console.WriteLine("Pas d'upgrade dispo");
+                                                                break;
+                                                        }
+                                                        break;
+                                                    case "Arc":
+                                                        Console.WriteLine("Arme déja possédée");
+                                                        break;
+                                                    case "Sagaie":
+                                                        takkar.SetNomArmeJoueur("Sagaie");
+                                                        switch (takkar.GetLevelArmeJoueur())
+                                                        {
+                                                            case "Medium":
+                                                                takkar.SetLevelArmeJoueur("Low");
+                                                                break;
+                                                            case "High":
+                                                                takkar.SetLevelArmeJoueur("Low");
+                                                                break;
+                                                            default:
+                                                                Console.WriteLine("Pas d'upgrade dispo");
+                                                                break;
+                                                        }
+                                                        break;
+                                                    default:
+                                                        Console.WriteLine("Pas d'arme dispo");
+                                                        break;
+                                                }
+                                                break;
+                                            case "sagaie":
+                                                switch (takkar.GetNomArmeJoueur())
+                                                {
+                                                    case "Masse":
+                                                        takkar.SetNomArmeJoueur("Masse");
+                                                        switch (takkar.GetLevelArmeJoueur())
+                                                        {
+                                                            case "Medium":
+                                                                takkar.SetLevelArmeJoueur("Low");
+                                                                break;
+                                                            case "High":
+                                                                takkar.SetLevelArmeJoueur("Low");
+                                                                break;
+                                                            default:
+                                                                Console.WriteLine("Pas d'upgrade dispo");
+                                                                break;
+                                                        }
+                                                        break;
+                                                    case "Arc":
+                                                        takkar.SetNomArmeJoueur("Arc");
+                                                        switch (takkar.GetLevelArmeJoueur())
+                                                        {
+                                                            case "Medium":
+                                                                takkar.SetLevelArmeJoueur("Low");
+                                                                break;
+                                                            case "High":
+                                                                takkar.SetLevelArmeJoueur("Low");
+                                                                break;
+                                                            default:
+                                                                Console.WriteLine("Pas d'upgrade dispo");
+                                                                break;
+                                                        }
+                                                        break;
+                                                    case "Sagaie":
+                                                        Console.WriteLine("Arme déja possédée");
+                                                        break;
+                                                    default:
+                                                        Console.WriteLine("Pas d'arme dispo");
+                                                        break;
+                                                }
+                                                break;
+                                            default:
+                                                Console.WriteLine("pas d'upgrade dispo");
+                                                break;
+                                        }
+
+                                        OrosArray[takkar.GetPosX(), nextMoveY] = 0;
+                                        upgradeRepos = null;
+                                    }
+                                    break;
+                                default:
+                                    Console.WriteLine("Classe non trouvée");
+                                    break;
+                            }
+
+                        }
                     }
                     break;
                 case "LeftArrow":
@@ -248,6 +1061,7 @@ while (continuer)
                     }
                     else
                     {
+                        tour++;
                         takkar.SetPosX(nextMoveX);
                     }
                     break;
@@ -261,6 +1075,7 @@ while (continuer)
                     }
                     else
                     {
+                        tour++;
                         takkar.SetPosX(nextMoveX);
                     }
                     break;

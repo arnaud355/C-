@@ -47,6 +47,10 @@ namespace FarCryPrimalPlateau
             m_id = id;
         }
 
+        public string GetNomUpgrade() 
+        { 
+            return m_upgrade.ToString(); 
+        }
         public int GetId()
         {
             return m_id;

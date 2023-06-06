@@ -51,6 +51,10 @@ namespace FarCryPrimalPlateau
                       
         }
 
+        public string GetName()
+        {
+            return m_name;
+        }
         public int GetId()
         {
             return m_id;

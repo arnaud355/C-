@@ -53,6 +53,10 @@ namespace FarCryPrimalPlateau
             this.m_coords = coords;
         }
 
+        public string GetName()
+        {
+            return m_name;
+        }
         public int GetId()
         {
             return m_id;

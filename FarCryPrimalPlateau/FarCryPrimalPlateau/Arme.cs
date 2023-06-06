@@ -46,5 +46,15 @@ namespace FarCryPrimalPlateau
             string name = m_LevelArme.ToString();
             return name;
         }
+
+        public void SetNomArme(string nomArme)
+        {
+            m_nomArme = (NomArme)Enum.Parse(typeof(NomArme), nomArme);
+        }
+
+        public void SetLevelArme(string levelArme)
+        {
+            m_LevelArme = (LevelArme)Enum.Parse(typeof(LevelArme), levelArme);
+        }
     }
 }

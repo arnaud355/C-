@@ -56,7 +56,10 @@ namespace FarCryPrimalPlateau
         {
             Console.WriteLine("Destructor Joueur was called");
         }
-
+        public string GetName()
+        {
+            return m_name;
+        }
         public bool IsAlive()
         {
             return m_alive;
@@ -326,6 +329,31 @@ namespace FarCryPrimalPlateau
             }
         }
 
+        public Arme GetArme()
+        {
+            return m_arme;
+        }
+
+        public string GetNomArmeJoueur()
+        {
+            return m_arme.GetNomArme();
+        }
+
+        public string GetLevelArmeJoueur()
+        {
+            return m_arme.GetLevelArme();
+        }
+
+        public void SetNomArmeJoueur(string nomArme)
+        {
+            m_arme.SetNomArme(nomArme);
+        }
+
+        public void SetLevelArmeJoueur(string levelArme)
+        {
+            m_arme.SetLevelArme(levelArme);
+        }
+
         public void CheckGameOver()
         {
             if(m_ptsVie == 0)
@@ -337,6 +365,15 @@ namespace FarCryPrimalPlateau
         public void GetInfoOfItem()
         {
             Console.WriteLine("Je suis {0}, pts vie : {1},  arme : {2}, coord X: {3}, coord Y : {4} ", m_name, m_ptsVie,m_arme, m_coords.X,m_coords.Y);
+        }
+
+        public void SetPtsVie(int ptsVie)
+        {
+            m_ptsVie += ptsVie;
+            if(m_ptsVie > 110)
+            {
+                m_ptsVie = 110;
+            }
         }
     }
 }
