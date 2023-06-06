@@ -18,7 +18,7 @@ namespace FarCryPrimalPlateau
             PredateurPuissant,
         }
 
-        public Carnivore(string name, string espece, int ptsVie, float force, string typeCarnivore, Coords coords) : base(name, espece, ptsVie, force, coords)
+        public Carnivore(int id, string name, string espece, int ptsVie, float force, int reactivite, string typeCarnivore, Coords coords) : base(id, name, espece, ptsVie, force, reactivite, coords)
         {
             m_typeDeCarnivore = (TypeCarnivore)Enum.Parse(typeof(TypeCarnivore), typeCarnivore);
         }

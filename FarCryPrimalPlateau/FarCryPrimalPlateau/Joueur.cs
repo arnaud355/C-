@@ -10,16 +10,33 @@ namespace FarCryPrimalPlateau
     {
         private float m_ptsVie { get; set; }
         private string m_name { get; set; }
+        private int m_id { get; set; }
+
+        private bool m_alive = true;
+
+        private int m_reactivite { get; set; }
 
         protected Coords m_coords;
 
         Arme m_arme { get; set; }
 
-        public Joueur(string name, float ptsVie, Coords coords, Arme arme)
+        public Joueur(int id, string name, float ptsVie, int reactivite, Coords coords, Arme arme)
         {
             m_name = name;
             m_ptsVie = ptsVie;
             m_arme = arme;
+            m_reactivite = reactivite;
+
+            if (Singleton.gamesId.Contains(id))
+            {
+                while (Singleton.gamesId.Contains(id))
+                {
+                    id = Singleton.GetRandomId();
+                }
+            }
+
+            Singleton.gamesId.Add(id);
+            m_id = id;
 
             if (Singleton.gamesCoordX.Contains(coords.X) && Singleton.gamesCoordX.Contains(coords.Y))
             {
@@ -40,6 +57,45 @@ namespace FarCryPrimalPlateau
             Console.WriteLine("Destructor Joueur was called");
         }
 
+        public bool IsAlive()
+        {
+            return m_alive;
+        }
+
+        public void SetIsAlive(bool living)
+        {
+            m_alive = living;    
+        }
+
+        public int GetId()
+        {
+            return m_id;
+        }
+
+        public int GetReactivite()
+        {
+            return m_reactivite;
+        }
+
+        public int GetPosX()
+        {
+            return m_coords.X;
+        }
+
+        public int GetPosY()
+        {
+            return m_coords.Y;
+        }
+
+        public void SetPosX(int x)
+        {
+            m_coords.X = x;
+        }
+
+        public void SetPosY(int y)
+        {
+            m_coords.Y = y;
+        }
         //Polymorphisme, 3 methodes Attaque() overlode, elles prennent type d'entrée différents
         public void Attaque(Izila personne)
         {
@@ -260,11 +316,13 @@ namespace FarCryPrimalPlateau
  
             m_ptsVie = m_ptsVie - dommage;
 
-            Console.WriteLine(m_ptsVie);
+            Console.WriteLine("Points de vie de Takkar: {0}",m_ptsVie);
             
             if(m_ptsVie < 0)
             {
+                Console.WriteLine("Mort de notre joueur {0}", m_name);
                 m_ptsVie = 0;
+                SetIsAlive(false);
             }
         }
 

@@ -12,16 +12,29 @@ namespace FarCryPrimalPlateau
         protected string m_name { get; set; }
         protected int m_id = 0;
         protected int m_ptsVie { get; set; }
+
         protected bool m_alive = true;
+        protected int m_reactivite { get; set; }
 
         protected Coords m_coords;
 
-        public Human(string name, int id,int ptsVie, Coords coords)
+        public Human(int id, string name,int ptsVie, int reactivite, Coords coords)
         {
             // Constructor Statements
             m_name = name;
-            m_id = id;
+            m_reactivite = reactivite;
             m_ptsVie = ptsVie;
+
+            if (Singleton.gamesId.Contains(id))
+            {
+                while (Singleton.gamesId.Contains(id))
+                {
+                    id = Singleton.GetRandomId();
+                }
+            }
+
+            Singleton.gamesId.Add(id);
+            m_id = id;
 
             if (Singleton.gamesCoordX.Contains(coords.X) && Singleton.gamesCoordX.Contains(coords.Y))
             {
@@ -37,6 +50,17 @@ namespace FarCryPrimalPlateau
             this.m_coords = coords;
                       
         }
+
+        public int GetId()
+        {
+            return m_id;
+        }
+
+        public int GetReactivite()
+        {
+            return m_reactivite;
+        }
+
         public void GetUserDetails()
         {
             Console.WriteLine("Id: {0}, Name: {1}, Pts vie: {2}", m_id, m_name,m_ptsVie);

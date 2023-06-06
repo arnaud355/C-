@@ -14,7 +14,7 @@ namespace FarCryPrimalPlateau
 
         Arme m_arme { get; set; }
 
-        public Udam(string name, int id, int ptsVie, Coords coords, string colorClothes, Arme arme, bool heros) : base(name, id, ptsVie, coords)
+        public Udam(int id, string name, int ptsVie, int reactivite, Coords coords, string colorClothes, Arme arme, bool heros = false) : base(id, name, ptsVie, reactivite, coords)
         {
             m_colorClothes = colorClothes;
             m_arme = arme;
@@ -104,6 +104,11 @@ namespace FarCryPrimalPlateau
                 }
                 joueur.SubitDegats(degat);
             }            
+        }
+
+        public bool GetHeros()
+        {
+            return m_heros;
         }
 
         public void AttaqueSpecialHeros(bool heros, Joueur joueur)

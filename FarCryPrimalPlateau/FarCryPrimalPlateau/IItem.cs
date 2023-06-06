@@ -8,6 +8,11 @@ namespace FarCryPrimalPlateau
 {
     public interface IItem
     {
-        void GetInfoOfItem();
+        public void GetInfoOfItem();
+        public int GetPosX();
+        public int GetPosY();
+        public int GetId();
+
+        public int GetReactivite();
     }
 }

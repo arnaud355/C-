@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using static FarCryPrimalPlateau.Arme;
 
 namespace FarCryPrimalPlateau
@@ -11,10 +12,9 @@ namespace FarCryPrimalPlateau
     {
         string m_colorClothes{ get; set; }
         bool m_heros = false;
-
         Arme m_arme;
 
-        public Izila(string name, int id, int ptsVie, Coords coords, string colorClothes, Arme arme, bool heros = false) : base(name, id, ptsVie, coords)
+        public Izila(int id, string name, int ptsVie, int reactivite, Coords coords, string colorClothes, Arme arme, bool heros = false) : base(id, name, ptsVie,reactivite, coords)
         {
             m_colorClothes = colorClothes;
             m_heros = heros;
@@ -101,6 +101,11 @@ namespace FarCryPrimalPlateau
                 joueur.SubitDegats(degat);
             }
                   
+        }
+
+        public bool GetHeros()
+        {
+            return m_heros;
         }
 
         public void AttaqueSpecialHeros(bool heros, Joueur joueur)

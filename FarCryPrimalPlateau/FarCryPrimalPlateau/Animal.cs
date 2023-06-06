@@ -14,15 +14,30 @@ namespace FarCryPrimalPlateau
         protected float m_force{ get; set; }
 
         protected bool m_alive = true;
+        protected int m_reactivite { get; set; }
+
+        protected int m_id { get; set; }
 
         protected Coords m_coords;
 
-        public Animal(string name, string espece, float ptsVie, float force, Coords coords) 
+        public Animal(int id, string name, string espece, float ptsVie, float force, int reactivite, Coords coords) 
         { 
             m_name = name;
             m_espece = espece;
             m_ptsVie = ptsVie; 
             m_force = force;
+            m_reactivite = reactivite;
+
+            if (Singleton.gamesId.Contains(id))
+            {
+                while (Singleton.gamesId.Contains(id))
+                {
+                    id = Singleton.GetRandomId();
+                }
+            }
+
+            Singleton.gamesId.Add(id);
+            m_id = id;
 
             if (Singleton.gamesCoordX.Contains(coords.X) && Singleton.gamesCoordX.Contains(coords.Y))
             {
@@ -36,6 +51,16 @@ namespace FarCryPrimalPlateau
             Singleton.gamesCoordX.Add(coords.X);
             Singleton.gamesCoordY.Add(coords.X);
             this.m_coords = coords;
+        }
+
+        public int GetId()
+        {
+            return m_id;
+        }
+
+        public int GetReactivite()
+        {
+            return m_reactivite;
         }
 
         public bool GetIsAlive()
@@ -60,6 +85,16 @@ namespace FarCryPrimalPlateau
         public void GetInfoOfItem()
         {
             Console.WriteLine("Je suis {0}, espece : {1},  pts vie : {2},  force : {3} ", m_name, m_espece,m_ptsVie,m_force);
+        }
+
+        public int GetPosX()
+        {
+            return m_coords.X;
+        }
+
+        public int GetPosY()
+        {
+            return m_coords.Y;
         }
     }
 }
