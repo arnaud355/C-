@@ -33,7 +33,7 @@ namespace FarCryPrimalPlateau
 
         public override void Attaque(Joueur joueur)
         {
-            int degat = 0;
+            float degat = 0f;
 
             if( joueur != null )
             {

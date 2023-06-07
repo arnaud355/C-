@@ -364,10 +364,10 @@ namespace FarCryPrimalPlateau
 
         public void GetInfoOfItem()
         {
-            Console.WriteLine("Je suis {0}, pts vie : {1},  arme : {2}, coord X: {3}, coord Y : {4} ", m_name, m_ptsVie,m_arme, m_coords.X,m_coords.Y);
+            Console.WriteLine("Je suis {0}, pts vie : {1},  arme : {2}, niveau arme : {3}, coord X: {4}, coord Y : {5} ", m_name, m_ptsVie,m_arme.GetNomArme(),m_arme.GetLevelArme(), m_coords.X,m_coords.Y);
         }
 
-        public void SetPtsVie(int ptsVie)
+        public void SetPtsVie(float ptsVie)
         {
             m_ptsVie += ptsVie;
             if(m_ptsVie > 110)

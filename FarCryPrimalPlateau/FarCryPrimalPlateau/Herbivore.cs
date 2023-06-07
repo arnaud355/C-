@@ -16,7 +16,7 @@ namespace FarCryPrimalPlateau
             Brouteur,
             Chargeur
         }
-        public Herbivore(int id, string name, string espece, int ptsVie, float force, int reactivite, Coords coords, string typeHerbivore = "Brouteur") : base(id, name, espece, ptsVie, force, reactivite, coords)
+        public Herbivore(int id, string name, string espece, float ptsVie, float force, int reactivite, Coords coords, string typeHerbivore = "Brouteur") : base(id, name, espece, ptsVie, force, reactivite, coords)
         {
             m_typeHerbivore = (TypeHerbivore)Enum.Parse(typeof(TypeHerbivore), typeHerbivore);
         }
